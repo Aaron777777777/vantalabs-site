@@ -19,6 +19,7 @@
       --muted-soft: rgba(255,255,255,0.50);
       --card-border: rgba(212, 175, 55, 0.16);
       --card-border-strong: rgba(212, 175, 55, 0.28);
+      --menu-accent: #45e6e6;
     }
 
     * { box-sizing: border-box; }
@@ -34,6 +35,10 @@
       overflow-x: hidden;
     }
 
+    body.menu-open {
+      overflow: hidden;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -47,7 +52,7 @@
       justify-content: space-between;
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 60;
       background: rgba(0, 0, 0, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -87,7 +92,7 @@
       border-color: rgba(212,175,55,0.55);
     }
 
-    .mobile-nav {
+    .mobile-nav-overlay {
       display: none;
     }
 
@@ -462,6 +467,8 @@
         border: 0;
         padding: 0;
         cursor: pointer;
+        position: relative;
+        z-index: 80;
       }
 
       .mobile-menu-top {
@@ -518,23 +525,70 @@
         background: rgba(255,255,255,0.20);
       }
 
-      .mobile-nav {
-        display: none;
-        padding: 0 18px 10px;
-        border-bottom: 1px solid rgba(255,255,255,0.04);
+      .mobile-nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 70;
+        background: rgba(0, 0, 0, 0.98);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.22s ease, visibility 0.22s ease;
       }
 
-      .mobile-nav.open {
+      .mobile-nav-overlay.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .mobile-nav-panel {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        justify-content: space-between;
+        padding: 126px 18px 34px;
       }
 
-      .mobile-nav a {
-        font-size: 15px;
-        color: rgba(255,255,255,0.94);
-        padding: 6px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.10);
+      .mobile-nav-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .mobile-nav-main a {
+        font-size: clamp(48px, 10vw, 64px);
+        line-height: 1;
+        font-weight: 300;
+        letter-spacing: -0.05em;
+        color: rgba(255,255,255,0.98);
+      }
+
+      .mobile-nav-footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 18px;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .mobile-nav-footer a {
+        font-size: 13px;
+        color: rgba(255,255,255,0.92);
+        position: relative;
+      }
+
+      .mobile-nav-footer a:not(:last-child)::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background: var(--menu-accent);
+        margin-left: 18px;
+        vertical-align: -2px;
       }
 
       .home-hero {
@@ -542,7 +596,7 @@
       }
 
       .portfolio-preview {
-        padding: 18px 18px 72px;
+        padding: 34px 18px 72px;
       }
 
       .about-section {
@@ -563,11 +617,12 @@
         line-height: 0.93;
         letter-spacing: -0.065em;
         text-align: center;
-        padding: 56px 0 20px;
+        padding: 56px 0 34px;
       }
 
       .headline .gold {
         display: block;
+        margin-top: 12px;
       }
 
       .portfolio-stack {
@@ -577,13 +632,13 @@
       }
 
       .portfolio-card {
-        min-height: 54vh;
+        min-height: 52vh;
         border-radius: 28px;
         box-shadow: 0 26px 52px rgba(0,0,0,0.44);
       }
 
       .portfolio-card-inner {
-        min-height: 54vh;
+        min-height: 52vh;
         padding: 20px 22px 18px;
       }
 
@@ -693,7 +748,7 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="mobile-menu" id="mobileMenuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+    <button class="mobile-menu" id="mobileMenuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNavOverlay">
       <div class="mobile-menu-top">
         <span class="mobile-menu-label">Menu</span>
         <span class="mobile-menu-icon"></span>
@@ -702,11 +757,23 @@
     </button>
   </header>
 
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-    <a href="#top">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-main">
+        <a href="#top">Home</a>
+        <a href="#portfolio">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <a href="#top">Vanta Labs</a>
+        <a href="#portfolio">Products</a>
+        <a href="#about">Company</a>
+        <a href="#contact">Email</a>
+      </div>
+    </div>
+  </div>
 
   <main id="top">
     <section class="hero home-hero">
@@ -719,7 +786,7 @@
       </div>
     </section>
 
-    <section class="portfolio-preview" aria-label="Featured apps">
+    <section class="portfolio-preview" id="portfolio" aria-label="Featured apps">
       <div class="portfolio-stack">
         <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
           <div class="portfolio-card-visual cl"></div>
@@ -867,19 +934,36 @@
 
   <script>
     const mobileMenuButton = document.getElementById('mobileMenuButton');
-    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+
+    function closeMenu() {
+      mobileNavOverlay.classList.remove('open');
+      mobileMenuButton.classList.remove('active');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      mobileNavOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    }
+
+    function openMenu() {
+      mobileNavOverlay.classList.add('open');
+      mobileMenuButton.classList.add('active');
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      mobileNavOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    }
 
     mobileMenuButton.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      mobileMenuButton.classList.toggle('active', isOpen);
-      mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      const isOpen = mobileNavOverlay.classList.contains('open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
-    mobileNav.querySelectorAll('a').forEach(link => {
+    mobileNavOverlay.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        mobileMenuButton.classList.remove('active');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
     });
   </script>

@@ -8,14 +8,12 @@
   <style>
     :root {
       --bg: #0a0a0a;
-      --panel: #111111;
-      --panel-2: #171717;
       --text: #f4f4f4;
       --muted: #b4b4b4;
       --gold: #d4af37;
       --gold-soft: rgba(212, 175, 55, 0.16);
       --border: rgba(212, 175, 55, 0.24);
-      --max: 1120px;
+      --max: 960px;
     }
 
     * { box-sizing: border-box; }
@@ -88,17 +86,12 @@
 
     .nav-links a:hover,
     .cta:hover,
-    .app-link:hover,
     .footer-links a:hover {
       color: var(--gold);
     }
 
     .hero {
-      padding: 88px 0 54px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: stretch;
+      padding: 88px 0 40px;
     }
 
     .hero-card,
@@ -129,17 +122,16 @@
 
     h1 {
       margin: 20px 0 14px;
-      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
       line-height: 0.97;
       letter-spacing: -0.04em;
     }
 
-    .hero p {
+    p {
       margin: 0;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       line-height: 1.75;
       color: var(--muted);
-      max-width: 62ch;
     }
 
     .hero-actions {
@@ -178,135 +170,28 @@
       color: var(--gold);
     }
 
-    .stat-panel {
-      padding: 30px;
-      display: grid;
-      gap: 18px;
-      align-content: start;
-    }
-
-    .stat {
-      padding: 18px 18px 16px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(255,255,255,0.01) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.18);
-    }
-
-    .stat h3 {
-      margin: 0 0 8px;
-      font-size: 0.95rem;
-      color: #f0d98a;
-      letter-spacing: 0.02em;
-    }
-
-    .stat p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.6;
-    }
-
     section {
-      padding: 24px 0;
+      padding: 20px 0;
     }
 
     .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
       letter-spacing: -0.03em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 60ch;
-      line-height: 1.7;
-    }
-
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .app-card {
-      padding: 24px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.015));
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: transform 0.18s ease, border-color 0.18s ease;
-    }
-
-    .app-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(212, 175, 55, 0.28);
-    }
-
-    .app-kicker {
-      color: #f0d98a;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-
-    .app-card h3 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
-    }
-
-    .app-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.7;
-      min-height: 88px;
-    }
-
-    .app-link {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
     }
 
     .panel {
       padding: 28px;
     }
 
-    .panel h3 {
-      margin: 0 0 12px;
-      font-size: 1.18rem;
-    }
-
-    .panel p,
-    .panel li {
-      color: var(--muted);
-      line-height: 1.8;
-      margin: 0;
-    }
-
-    ul.clean {
-      padding-left: 18px;
-      margin: 0;
-    }
-
     .contact-list {
       display: grid;
       gap: 12px;
-      margin-top: 8px;
+      margin-top: 18px;
     }
 
     .contact-item {
@@ -314,6 +199,7 @@
       border-radius: 18px;
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text);
     }
 
     .label {
@@ -345,19 +231,6 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 960px) {
-      .hero,
-      .apps,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .app-card p {
-        min-height: 0;
-      }
-    }
-
     @media (max-width: 680px) {
       .nav {
         min-height: 64px;
@@ -372,7 +245,6 @@
       }
 
       .hero-card,
-      .stat-panel,
       .panel {
         padding: 22px;
       }
@@ -392,7 +264,6 @@
         <span>Vanta Labs</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#apps">Apps</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy</a>
@@ -407,140 +278,66 @@
           <span class="eyebrow">Official Website</span>
           <h1>VANTA LABS NW LTD</h1>
           <p>
-            Vanta Labs NW Ltd builds clean, useful mobile apps with a focus on premium design,
+            Vanta Labs NW Ltd builds mobile apps and software products with a focus on clean design,
             clarity, and practical everyday value.
           </p>
           <div class="hero-actions">
-            <a class="cta" href="#apps">View apps</a>
             <a class="ghost" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
           </div>
-        </div>
-
-        <aside class="panel stat-panel" aria-label="Highlights">
-          <div class="stat">
-            <h3>Business</h3>
-            <p>Registered UK limited company operating under the Vanta Labs brand.</p>
-          </div>
-          <div class="stat">
-            <h3>Focus</h3>
-            <p>Mobile apps built to simplify planning, comparison, and niche user workflows.</p>
-          </div>
-          <div class="stat">
-            <h3>Contact</h3>
-            <p>For support or business enquiries, use the email address listed below.</p>
-          </div>
-        </aside>
-      </section>
-
-      <section id="apps">
-        <div class="section-head">
-          <div>
-            <h2>Apps</h2>
-          </div>
-          <p>
-            Current and developing products from Vanta Labs.
-          </p>
-        </div>
-        <div class="apps">
-          <article class="app-card">
-            <div class="app-kicker">Price comparison</div>
-            <h3>Cigar Ledger</h3>
-            <p>
-              A premium cigar price comparison app focused on helping users compare buying routes and spot meaningful savings.
-            </p>
-            <span class="app-link">Premium savings intelligence</span>
-          </article>
-
-          <article class="app-card">
-            <div class="app-kicker">Shift planning</div>
-            <h3>Vanta Shift</h3>
-            <p>
-              A clean shift planner built for workers who need a straightforward rota, hours, and earnings view in one place.
-            </p>
-            <span class="app-link">Rota and shift calendar</span>
-          </article>
-
-          <article class="app-card">
-            <div class="app-kicker">Community / lounge</div>
-            <h3>Herf Station</h3>
-            <p>
-              A premium lounge-style mobile experience designed around virtual cigar sessions and social connection.
-            </p>
-            <span class="app-link">Live lounge experience</span>
-          </article>
         </div>
       </section>
 
       <section id="about">
         <div class="section-head">
-          <div>
-            <h2>About</h2>
-          </div>
+          <h2>About</h2>
           <p>
-            Built with a simple philosophy: make software that feels sharp, purposeful, and easy to use.
+            Vanta Labs NW Ltd is a UK limited company focused on building clean, useful digital products.
           </p>
         </div>
 
-        <div class="about-grid">
-          <div class="panel">
-            <h3>What we do</h3>
-            <p>
-              Vanta Labs creates mobile products with a clean visual identity and a bias toward practical utility.
-              We focus on simple experiences, premium presentation, and solving specific user problems clearly.
-            </p>
-          </div>
-
-          <div class="panel">
-            <h3>Approach</h3>
-            <ul class="clean">
-              <li>Clear, focused product design</li>
-              <li>Premium dark-first visual direction</li>
-              <li>Small, useful features over clutter</li>
-              <li>Independent product development</li>
-            </ul>
-          </div>
+        <div class="panel">
+          <p>
+            We create software with a simple philosophy: keep it sharp, purposeful, and easy to use.
+            Our focus is on practical tools, premium presentation, and straightforward user experiences.
+          </p>
         </div>
       </section>
 
       <section id="contact">
         <div class="section-head">
-          <div>
-            <h2>Contact</h2>
-          </div>
+          <h2>Contact</h2>
           <p>
             For support, business enquiries, or general contact, use the details below.
           </p>
         </div>
 
-        <div class="contact-grid">
-          <div class="panel">
-            <h3>Business contact</h3>
-            <div class="contact-list">
-              <div class="contact-item">
-                <span class="label">Company</span>
-                VANTA LABS NW LTD
-              </div>
-              <div class="contact-item">
-                <span class="label">Email</span>
-                <a href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
-              </div>
-              <div class="contact-item">
-                <span class="label">Website</span>
-                <span>vantalabs.co.uk</span>
-              </div>
+        <div class="panel">
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="label">Company</span>
+              VANTA LABS NW LTD
+            </div>
+            <div class="contact-item">
+              <span class="label">Email</span>
+              <a href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
+            </div>
+            <div class="contact-item">
+              <span class="label">Website</span>
+              vantalabs.co.uk
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="panel">
-            <h3>Privacy</h3>
-            <p>
-              Our privacy policy explains how Vanta Labs handles website enquiries and general app-related information.
-              You can read it here:
-            </p>
-            <p style="margin-top: 14px;">
-              <a class="app-link" href="privacy.html">Open privacy policy</a>
-            </p>
-          </div>
+      <section>
+        <div class="panel">
+          <h2 style="margin-top:0; margin-bottom:12px;">Privacy</h2>
+          <p>
+            Our privacy policy explains how Vanta Labs handles website enquiries and general app-related information.
+          </p>
+          <p style="margin-top:14px;">
+            <a href="privacy.html" style="color:#d4af37; font-weight:600;">Open privacy policy</a>
+          </p>
         </div>
       </section>
     </div>
@@ -550,7 +347,6 @@
     <div class="wrap footer-row">
       <div>© <span id="year"></span> VANTA LABS NW LTD. All rights reserved.</div>
       <div class="footer-links">
-        <a href="#apps">Apps</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy Policy</a>

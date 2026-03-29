@@ -213,25 +213,7 @@
     }
 
     .portfolio-tags {
-      margin-top: 22px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .portfolio-tag {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 38px;
-      padding: 0 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.10);
-      font-size: 14px;
-      color: rgba(255,255,255,0.88);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      display: none;
     }
 
     .about-section {
@@ -539,15 +521,15 @@
 
       .headline {
         max-width: none;
-        font-size: clamp(54px, 15vw, 84px);
+        font-size: clamp(52px, 14vw, 80px);
         line-height: 0.93;
-        letter-spacing: -0.07em;
+        letter-spacing: -0.065em;
         text-align: center;
         padding: 56px 0 20px;
       }
 
       .headline .gold {
-        display: inline;
+        display: block;
       }
 
       .portfolio-stack {
@@ -579,18 +561,6 @@
         font-size: clamp(46px, 12vw, 72px);
         line-height: 0.94;
         letter-spacing: -0.065em;
-      }
-
-      .portfolio-tags {
-        margin-top: 18px;
-        gap: 10px;
-      }
-
-      .portfolio-tag {
-        min-height: 40px;
-        padding: 0 15px;
-        font-size: 15px;
-        background: rgba(255,255,255,0.13);
       }
 
       .section-title {
@@ -699,7 +669,8 @@
       <div class="hero-inner">
         <div class="eyebrow">ABOUT US</div>
         <h1 class="headline">
-          We build digital products by stripping things back to <span class="gold">what matters</span>
+          We build digital products by stripping things back to what matters.
+          <span class="gold">That’s what Vanta Labs is built on.</span>
         </h1>
       </div>
     </section>
@@ -711,11 +682,6 @@
           <div class="portfolio-card-inner">
             <div class="portfolio-card-label">Cigar price intelligence</div>
             <h3 class="portfolio-title">Cigar Ledger</h3>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">UK vs EU</span>
-              <span class="portfolio-tag">Box savings</span>
-              <span class="portfolio-tag">Premium</span>
-            </div>
           </div>
         </a>
 
@@ -724,11 +690,6 @@
           <div class="portfolio-card-inner">
             <div class="portfolio-card-label">Virtual cigar lounge</div>
             <h3 class="portfolio-title">Herf Station</h3>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">Lounge</span>
-              <span class="portfolio-tag">Live rooms</span>
-              <span class="portfolio-tag">Premium</span>
-            </div>
           </div>
         </a>
 
@@ -737,11 +698,6 @@
           <div class="portfolio-card-inner">
             <div class="portfolio-card-label">Shift planning</div>
             <h3 class="portfolio-title">Vanta Shift</h3>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">Rotas</span>
-              <span class="portfolio-tag">Hours</span>
-              <span class="portfolio-tag">Earnings</span>
-            </div>
           </div>
         </a>
       </div>

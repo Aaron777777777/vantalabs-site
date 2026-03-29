@@ -87,6 +87,10 @@
       border-color: rgba(212,175,55,0.55);
     }
 
+    .mobile-nav {
+      display: none;
+    }
+
     .hero-inner,
     .section-wrap {
       max-width: 1360px;
@@ -454,6 +458,10 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 8px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
       }
 
       .mobile-menu-top {
@@ -483,6 +491,7 @@
         height: 2px;
         background: rgba(255,255,255,0.96);
         border-radius: 2px;
+        transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
       }
 
       .mobile-menu-icon::before {
@@ -493,10 +502,39 @@
         bottom: 1px;
       }
 
+      .mobile-menu.active .mobile-menu-icon::before {
+        top: 7px;
+        transform: rotate(45deg);
+      }
+
+      .mobile-menu.active .mobile-menu-icon::after {
+        bottom: 7px;
+        transform: rotate(-45deg);
+      }
+
       .mobile-menu-line {
         width: 120px;
         height: 1px;
         background: rgba(255,255,255,0.20);
+      }
+
+      .mobile-nav {
+        display: none;
+        padding: 0 18px 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+
+      .mobile-nav.open {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .mobile-nav a {
+        font-size: 15px;
+        color: rgba(255,255,255,0.94);
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
       }
 
       .home-hero {
@@ -539,14 +577,14 @@
       }
 
       .portfolio-card {
-        min-height: 58vh;
+        min-height: 54vh;
         border-radius: 28px;
         box-shadow: 0 26px 52px rgba(0,0,0,0.44);
       }
 
       .portfolio-card-inner {
-        min-height: 58vh;
-        padding: 22px 22px 20px;
+        min-height: 54vh;
+        padding: 20px 22px 18px;
       }
 
       .portfolio-card-label {
@@ -655,14 +693,20 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <div class="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu" id="mobileMenuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
       <div class="mobile-menu-top">
         <span class="mobile-menu-label">Menu</span>
         <span class="mobile-menu-icon"></span>
       </div>
       <div class="mobile-menu-line"></div>
-    </div>
+    </button>
   </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main id="top">
     <section class="hero home-hero">
@@ -820,5 +864,24 @@
       </div>
     </section>
   </main>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileNav = document.getElementById('mobileNav');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      mobileMenuButton.classList.toggle('active', isOpen);
+      mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileMenuButton.classList.remove('active');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>

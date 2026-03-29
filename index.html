@@ -112,9 +112,14 @@
 
     .portfolio-preview {
       padding: 44px 44px 120px;
+      overflow: hidden;
     }
 
-    .portfolio-grid {
+    .portfolio-mobile-slider {
+      width: 100%;
+    }
+
+    .portfolio-track {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
@@ -132,6 +137,7 @@
       justify-content: center;
       padding: 26px;
       transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+      position: relative;
     }
 
     .portfolio-card:hover {
@@ -345,7 +351,7 @@
     }
 
     @media (max-width: 1100px) {
-      .portfolio-grid {
+      .portfolio-track {
         grid-template-columns: 1fr;
       }
 
@@ -397,8 +403,7 @@
       }
 
       .portfolio-preview {
-        padding-top: 28px;
-        padding-bottom: 72px;
+        padding: 28px 0 72px;
       }
 
       .about-section {
@@ -421,20 +426,47 @@
         line-height: 1.14;
       }
 
-      .portfolio-grid {
-        gap: 14px;
+      .portfolio-mobile-slider {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 0 18px;
+        scrollbar-width: none;
+      }
+
+      .portfolio-mobile-slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      .portfolio-track {
+        display: flex;
+        gap: 0;
+        padding-right: 18px;
       }
 
       .portfolio-card {
-        min-height: 108px;
-        border-radius: 18px;
-        padding: 14px 16px;
+        flex: 0 0 86%;
+        min-height: 210px;
+        padding: 22px;
+        border-radius: 26px;
+        scroll-snap-align: center;
+        margin-right: -22px;
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+      }
+
+      .portfolio-card:first-child {
+        margin-left: 0;
+      }
+
+      .portfolio-card:last-child {
+        margin-right: 0;
       }
 
       .portfolio-title {
-        font-size: clamp(16px, 5.8vw, 22px);
-        letter-spacing: 0.05em;
-        line-height: 1.05;
+        font-size: clamp(24px, 8vw, 38px);
+        letter-spacing: 0.07em;
+        line-height: 1.04;
       }
 
       .section-title {
@@ -543,16 +575,20 @@
     </section>
 
     <section class="portfolio-preview" aria-label="Featured apps">
-      <div class="portfolio-grid">
-        <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
-          <div class="portfolio-title">Cigar Ledger</div>
-        </a>
-        <a href="#" class="portfolio-card" aria-label="Herf Station">
-          <div class="portfolio-title">Herf Station</div>
-        </a>
-        <a href="#" class="portfolio-card" aria-label="Vanta Shift">
-          <div class="portfolio-title">Vanta Shift</div>
-        </a>
+      <div class="portfolio-mobile-slider">
+        <div class="portfolio-track">
+          <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
+            <div class="portfolio-title">Cigar Ledger</div>
+          </a>
+
+          <a href="#" class="portfolio-card" aria-label="Herf Station">
+            <div class="portfolio-title">Herf Station</div>
+          </a>
+
+          <a href="#" class="portfolio-card" aria-label="Vanta Shift">
+            <div class="portfolio-title">Vanta Shift</div>
+          </a>
+        </div>
       </div>
     </section>
 

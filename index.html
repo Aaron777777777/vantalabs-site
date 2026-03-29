@@ -7,17 +7,18 @@
   <meta name="description" content="Official website of Vanta Labs NW Ltd." />
   <style>
     :root {
-      --bg: #060606;
-      --bg-soft: #0d0d0d;
-      --panel: rgba(255,255,255,0.03);
-      --panel-border: rgba(255,255,255,0.07);
+      --bg: #070707;
+      --bg-2: #0d0d0d;
+      --panel: rgba(255,255,255,0.035);
+      --panel-border: rgba(255,255,255,0.08);
       --text: #f5f5f5;
-      --muted: #a8a8a8;
+      --muted: #a9a9a9;
       --gold: #d4af37;
-      --gold-soft: rgba(212,175,55,0.12);
-      --gold-border: rgba(212,175,55,0.24);
-      --max: 980px;
-      --radius: 26px;
+      --gold-soft: rgba(212,175,55,0.13);
+      --gold-border: rgba(212,175,55,0.22);
+      --max: 1120px;
+      --radius: 28px;
+      --shadow: 0 22px 60px rgba(0,0,0,0.38);
     }
 
     * {
@@ -30,11 +31,11 @@
 
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 36%),
-        linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 34%),
+        linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
     }
 
     a {
@@ -52,16 +53,16 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(12px);
-      background: rgba(8, 8, 8, 0.78);
+      background: rgba(8,8,8,0.78);
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav {
-      min-height: 72px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
     }
 
     .brand {
@@ -73,89 +74,96 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 13px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
       display: grid;
       place-items: center;
       color: var(--gold);
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       border: 1px solid var(--gold-border);
-      background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.05),
-        0 10px 30px rgba(0,0,0,0.35);
+      background: linear-gradient(180deg, #161616 0%, #0d0d0d 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 12px 30px rgba(0,0,0,0.34);
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      align-items: center;
+      gap: 22px;
       color: var(--muted);
       font-size: 0.95rem;
     }
 
     .nav-links a:hover,
-    .link-gold:hover {
+    .text-link:hover {
       color: var(--gold);
     }
 
     .hero {
-      padding: 90px 0 28px;
+      padding: 96px 0 34px;
+    }
+
+    .hero-shell {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
     .hero-card,
     .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.018));
       border: 1px solid var(--panel-border);
       border-radius: var(--radius);
-      box-shadow:
-        0 18px 50px rgba(0,0,0,0.34),
-        inset 0 1px 0 rgba(255,255,255,0.03);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.03);
     }
 
     .hero-card {
-      padding: 36px;
+      padding: 40px;
     }
 
-    .eyebrow {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 14px;
+      padding: 9px 14px;
       border-radius: 999px;
       background: var(--gold-soft);
       border: 1px solid var(--gold-border);
       color: #f0d98a;
       font-size: 0.82rem;
+      font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
     h1 {
       margin: 18px 0 14px;
-      font-size: clamp(2.7rem, 5vw, 4.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.9rem, 5vw, 5rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      max-width: 760px;
     }
 
-    .hero-text {
-      max-width: 700px;
-      font-size: 1.08rem;
-      line-height: 1.8;
+    .hero-copy {
+      margin: 0;
+      max-width: 690px;
       color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.85;
     }
 
     .hero-actions {
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 30px;
     }
 
     .button,
     .button-ghost {
-      min-height: 50px;
+      min-height: 52px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -168,7 +176,7 @@
     .button {
       background: var(--gold);
       color: #111;
-      box-shadow: 0 8px 24px rgba(212,175,55,0.22);
+      box-shadow: 0 10px 25px rgba(212,175,55,0.22);
     }
 
     .button:hover {
@@ -176,7 +184,7 @@
     }
 
     .button-ghost {
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.025);
       border: 1px solid rgba(255,255,255,0.1);
       color: var(--text);
     }
@@ -186,35 +194,69 @@
       color: var(--gold);
     }
 
+    .hero-side {
+      padding: 28px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .mini-card {
+      padding: 18px 18px 16px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(212,175,55,0.07), rgba(255,255,255,0.01));
+      border: 1px solid rgba(212,175,55,0.18);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.94rem;
+      color: #f0d98a;
+      letter-spacing: 0.02em;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.97rem;
+    }
+
     section {
-      padding: 20px 0;
+      padding: 24px 0;
     }
 
     .section-head {
-      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
     .section-head h2 {
       margin: 0 0 8px;
-      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
       letter-spacing: -0.03em;
     }
 
     .section-head p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.75;
-      max-width: 720px;
+      line-height: 1.8;
+      max-width: 700px;
     }
 
     .panel {
-      padding: 28px;
+      padding: 30px;
     }
 
     .about-copy {
+      margin: 0;
       color: var(--muted);
-      line-height: 1.85;
+      line-height: 1.9;
       font-size: 1.02rem;
+      max-width: 860px;
     }
 
     .contact-grid {
@@ -226,11 +268,10 @@
     .contact-list {
       display: grid;
       gap: 12px;
-      margin-top: 4px;
     }
 
     .contact-item {
-      padding: 15px 16px;
+      padding: 16px 17px;
       border-radius: 18px;
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.06);
@@ -238,15 +279,21 @@
 
     .label {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       color: #f0d98a;
       font-size: 0.8rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
+    .privacy-copy {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
     footer {
-      padding: 34px 0 54px;
+      padding: 36px 0 56px;
       color: var(--muted);
     }
 
@@ -265,22 +312,30 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      .hero-shell,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
       .nav-links {
         display: none;
       }
 
       .hero {
-        padding-top: 64px;
+        padding-top: 68px;
       }
 
       .hero-card,
+      .hero-side,
       .panel {
         padding: 22px;
       }
 
-      .contact-grid {
-        grid-template-columns: 1fr;
+      .section-head {
+        display: block;
       }
 
       .footer-row {
@@ -309,41 +364,64 @@
   <main id="top">
     <div class="wrap">
       <section class="hero" aria-label="Intro">
-        <div class="hero-card">
-          <span class="eyebrow">Official Website</span>
-          <h1>VANTA LABS NW LTD</h1>
-          <p class="hero-text">
-            Vanta Labs NW Ltd builds clean, focused mobile apps and software products with an emphasis on premium presentation, clarity, and practical everyday value.
-          </p>
+        <div class="hero-shell">
+          <div class="hero-card">
+            <span class="badge">Official Website</span>
+            <h1>VANTA LABS NW LTD</h1>
+            <p class="hero-copy">
+              Vanta Labs NW Ltd is an independent UK software company focused on building clean, premium mobile apps and digital products with practical everyday value.
+            </p>
 
-          <div class="hero-actions">
-            <a class="button-ghost" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
-            <a class="button" href="#contact">Contact</a>
+            <div class="hero-actions">
+              <a class="button" href="#contact">Contact</a>
+              <a class="button-ghost" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
+            </div>
           </div>
+
+          <aside class="hero-card hero-side" aria-label="Company highlights">
+            <div class="mini-card">
+              <h3>Independent</h3>
+              <p>Built with a lean, product-first approach focused on clarity, quality, and execution.</p>
+            </div>
+
+            <div class="mini-card">
+              <h3>Design-led</h3>
+              <p>Products are shaped around clean interfaces, premium presentation, and straightforward usability.</p>
+            </div>
+
+            <div class="mini-card">
+              <h3>Practical</h3>
+              <p>Every product is designed to solve specific user problems clearly rather than add noise or clutter.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
       <section id="about">
         <div class="section-head">
-          <h2>About</h2>
-          <p>
-            Vanta Labs NW Ltd is a UK limited company focused on building useful digital products with a clean visual identity and straightforward user experience.
-          </p>
+          <div>
+            <h2>About</h2>
+            <p>
+              Vanta Labs creates focused digital products with a simple philosophy: keep them sharp, purposeful, and easy to use.
+            </p>
+          </div>
         </div>
 
         <div class="panel">
-          <div class="about-copy">
-            We create software with a simple approach: keep it sharp, purposeful, and easy to use. Our focus is on practical utility, premium design, and building products that solve specific problems clearly.
-          </div>
+          <p class="about-copy">
+            Our work centres on practical software, premium visual design, and building straightforward products that feel refined from the first interaction. We favour simplicity over excess and clarity over complexity.
+          </p>
         </div>
       </section>
 
       <section id="contact">
         <div class="section-head">
-          <h2>Contact</h2>
-          <p>
-            For support, business enquiries, or general contact, use the details below.
-          </p>
+          <div>
+            <h2>Contact</h2>
+            <p>
+              For support, business enquiries, or general contact, use the details below.
+            </p>
+          </div>
         </div>
 
         <div class="contact-grid">
@@ -356,7 +434,7 @@
 
               <div class="contact-item">
                 <span class="label">Email</span>
-                <a class="link-gold" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
+                <a class="text-link" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
               </div>
 
               <div class="contact-item">
@@ -367,13 +445,10 @@
           </div>
 
           <div class="panel">
-            <div class="section-head" style="margin-bottom:12px;">
-              <h2 style="font-size:1.45rem; margin:0 0 8px;">Privacy</h2>
-              <p style="margin:0;">
-                Our privacy policy explains how Vanta Labs handles website enquiries and general app-related information.
-              </p>
-            </div>
-
+            <h2 style="margin-top:0; margin-bottom:10px; font-size:1.45rem;">Privacy</h2>
+            <p class="privacy-copy">
+              Our privacy policy explains how Vanta Labs handles website enquiries and general app-related information.
+            </p>
             <a class="button-ghost" href="privacy.html">Open privacy policy</a>
           </div>
         </div>
@@ -394,7 +469,7 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

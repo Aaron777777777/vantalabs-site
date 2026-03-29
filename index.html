@@ -62,6 +62,10 @@
       white-space: nowrap;
     }
 
+    .mobile-menu {
+      display: none;
+    }
+
     .top-nav {
       display: flex;
       align-items: center;
@@ -94,7 +98,7 @@
     }
 
     .home-hero {
-      padding: 92px 44px 30px;
+      padding: 92px 44px 28px;
     }
 
     .eyebrow {
@@ -118,15 +122,10 @@
     }
 
     .portfolio-preview {
-      padding: 34px 44px 120px;
-      overflow: hidden;
+      padding: 28px 44px 120px;
     }
 
-    .portfolio-slider {
-      overflow: visible;
-    }
-
-    .portfolio-track {
+    .portfolio-stack {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
@@ -138,10 +137,7 @@
       border-radius: 30px;
       overflow: hidden;
       position: relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)),
-        radial-gradient(circle at top left, rgba(212,175,55,0.06), transparent 40%),
-        #050505;
+      background: #050505;
       transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
       box-shadow: 0 18px 40px rgba(0,0,0,0.28);
     }
@@ -152,14 +148,40 @@
       box-shadow: 0 24px 46px rgba(0,0,0,0.38);
     }
 
-    .portfolio-card::before {
+    .portfolio-card-visual {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .portfolio-card::after {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.18) 100%);
-      pointer-events: none;
       z-index: 1;
+      background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.62) 82%, rgba(0,0,0,0.82) 100%);
+      pointer-events: none;
+    }
+
+    .portfolio-card-visual.cl {
+      background:
+        radial-gradient(circle at 20% 16%, rgba(212,175,55,0.12), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18)),
+        #050505;
+    }
+
+    .portfolio-card-visual.hs {
+      background:
+        radial-gradient(circle at 76% 16%, rgba(212,175,55,0.12), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18)),
+        #050505;
+    }
+
+    .portfolio-card-visual.vs {
+      background:
+        radial-gradient(circle at 20% 16%, rgba(124, 92, 255, 0.18), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18)),
+        #050505;
     }
 
     .portfolio-card-inner {
@@ -169,34 +191,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 28px;
-    }
-
-    .portfolio-card-visual {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .portfolio-card-visual.cl {
-      background:
-        radial-gradient(circle at 24% 18%, rgba(212,175,55,0.11), transparent 26%),
-        linear-gradient(180deg, rgba(10,10,10,0.08), rgba(0,0,0,0.65)),
-        #050505;
-    }
-
-    .portfolio-card-visual.hs {
-      background:
-        radial-gradient(circle at 76% 14%, rgba(212,175,55,0.11), transparent 26%),
-        linear-gradient(180deg, rgba(10,10,10,0.08), rgba(0,0,0,0.65)),
-        #050505;
-    }
-
-    .portfolio-card-visual.vs {
-      background:
-        radial-gradient(circle at 24% 18%, rgba(136, 91, 255, 0.17), transparent 26%),
-        linear-gradient(180deg, rgba(10,10,10,0.08), rgba(0,0,0,0.65)),
-        #050505;
+      padding: 30px;
     }
 
     .portfolio-card-label {
@@ -204,12 +199,12 @@
       font-size: 13px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.80);
     }
 
     .portfolio-title {
       margin: 0;
-      max-width: 90%;
+      max-width: 92%;
       font-size: clamp(30px, 2.8vw, 46px);
       line-height: 0.98;
       font-weight: 300;
@@ -434,7 +429,7 @@
     }
 
     @media (max-width: 1100px) {
-      .portfolio-track {
+      .portfolio-stack {
         grid-template-columns: 1fr;
       }
 
@@ -455,40 +450,79 @@
 
     @media (max-width: 760px) {
       .site-header {
-        padding: 22px 18px 12px;
-        align-items: flex-start;
-        gap: 14px;
-        flex-direction: column;
+        padding: 20px 18px 8px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        gap: 12px;
       }
 
       .brand {
         font-size: 16px;
         letter-spacing: 0.18em;
+        line-height: 1;
       }
 
       .top-nav {
-        gap: 16px;
+        display: none;
       }
 
-      .top-nav a {
+      .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+
+      .mobile-menu-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .mobile-menu-label {
         font-size: 15px;
-        padding-bottom: 4px;
+        color: rgba(255,255,255,0.96);
+        line-height: 1;
+      }
+
+      .mobile-menu-icon {
+        width: 22px;
+        height: 16px;
+        position: relative;
+      }
+
+      .mobile-menu-icon::before,
+      .mobile-menu-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(255,255,255,0.96);
+        border-radius: 2px;
+      }
+
+      .mobile-menu-icon::before {
+        top: 1px;
+      }
+
+      .mobile-menu-icon::after {
+        bottom: 1px;
+      }
+
+      .mobile-menu-line {
+        width: 120px;
+        height: 1px;
+        background: rgba(255,255,255,0.20);
       }
 
       .home-hero {
-        padding: 42px 18px 18px;
-      }
-
-      .portfolio-preview,
-      .about-section,
-      .contact-section {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 34px 18px 18px;
       }
 
       .portfolio-preview {
-        padding-top: 24px;
-        padding-bottom: 72px;
+        padding: 18px 18px 72px;
       }
 
       .about-section {
@@ -500,87 +534,63 @@
       }
 
       .eyebrow {
-        margin-bottom: 18px;
-        font-size: 12px;
-      }
-
-      .headline {
-        padding: 0 18px;
-        max-width: none;
-        font-size: clamp(54px, 15vw, 82px);
-        line-height: 0.93;
-        letter-spacing: -0.06em;
-      }
-
-      .headline .gold {
-        display: block;
-      }
-
-      .portfolio-slider {
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        padding: 0 18px;
-      }
-
-      .portfolio-slider::-webkit-scrollbar {
         display: none;
       }
 
-      .portfolio-track {
+      .headline {
+        max-width: none;
+        font-size: clamp(54px, 15vw, 84px);
+        line-height: 0.93;
+        letter-spacing: -0.07em;
+        text-align: center;
+        padding: 56px 0 20px;
+      }
+
+      .headline .gold {
+        display: inline;
+      }
+
+      .portfolio-stack {
         display: flex;
-        gap: 0;
-        width: max-content;
-        padding-right: 18px;
+        flex-direction: column;
+        gap: 18px;
       }
 
       .portfolio-card {
-        flex: 0 0 88vw;
-        width: 88vw;
-        min-height: 610px;
+        min-height: 74vh;
         border-radius: 28px;
-        scroll-snap-align: start;
-        margin-right: -26px;
-        box-shadow: 0 28px 52px rgba(0,0,0,0.45);
-      }
-
-      .portfolio-card:last-child {
-        margin-right: 0;
+        box-shadow: 0 26px 52px rgba(0,0,0,0.44);
       }
 
       .portfolio-card-inner {
-        min-height: 610px;
-        padding: 34px 28px 28px;
-        justify-content: flex-end;
+        min-height: 74vh;
+        padding: 24px 22px 22px;
       }
 
       .portfolio-card-label {
-        margin-bottom: 14px;
+        margin-bottom: auto;
         font-size: 11px;
-        letter-spacing: 0.28em;
+        letter-spacing: 0.26em;
         color: rgba(255,255,255,0.80);
       }
 
       .portfolio-title {
         max-width: 100%;
-        font-size: clamp(54px, 13vw, 72px);
-        line-height: 0.92;
-        letter-spacing: -0.06em;
+        font-size: clamp(46px, 12vw, 72px);
+        line-height: 0.94;
+        letter-spacing: -0.065em;
       }
 
       .portfolio-tags {
-        margin-top: 22px;
+        margin-top: 18px;
         gap: 10px;
       }
 
       .portfolio-tag {
-        min-height: 42px;
-        padding: 0 16px;
+        min-height: 40px;
+        padding: 0 15px;
         font-size: 15px;
         background: rgba(255,255,255,0.13);
-        border: 1px solid rgba(255,255,255,0.10);
       }
 
       .section-title {
@@ -674,6 +684,14 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-top">
+        <span class="mobile-menu-label">Menu</span>
+        <span class="mobile-menu-icon"></span>
+      </div>
+      <div class="mobile-menu-line"></div>
+    </div>
   </header>
 
   <main id="top">
@@ -681,54 +699,51 @@
       <div class="hero-inner">
         <div class="eyebrow">ABOUT US</div>
         <h1 class="headline">
-          We’re an independent UK software company that builds clean digital products by stripping things back to what matters.
-          <span class="gold">That’s what Vanta Labs is built on.</span>
+          We build digital products by stripping things back to <span class="gold">what matters</span>
         </h1>
       </div>
     </section>
 
     <section class="portfolio-preview" aria-label="Featured apps">
-      <div class="portfolio-slider">
-        <div class="portfolio-track">
-          <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
-            <div class="portfolio-card-visual cl"></div>
-            <div class="portfolio-card-inner">
-              <div class="portfolio-card-label">Cigar price intelligence</div>
-              <h3 class="portfolio-title">Cigar Ledger</h3>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">UK vs EU</span>
-                <span class="portfolio-tag">Box savings</span>
-                <span class="portfolio-tag">Premium</span>
-              </div>
+      <div class="portfolio-stack">
+        <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
+          <div class="portfolio-card-visual cl"></div>
+          <div class="portfolio-card-inner">
+            <div class="portfolio-card-label">Cigar price intelligence</div>
+            <h3 class="portfolio-title">Cigar Ledger</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">UK vs EU</span>
+              <span class="portfolio-tag">Box savings</span>
+              <span class="portfolio-tag">Premium</span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <a href="#" class="portfolio-card" aria-label="Herf Station">
-            <div class="portfolio-card-visual hs"></div>
-            <div class="portfolio-card-inner">
-              <div class="portfolio-card-label">Virtual cigar lounge</div>
-              <h3 class="portfolio-title">Herf Station</h3>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">Lounge</span>
-                <span class="portfolio-tag">Live rooms</span>
-                <span class="portfolio-tag">Premium</span>
-              </div>
+        <a href="#" class="portfolio-card" aria-label="Herf Station">
+          <div class="portfolio-card-visual hs"></div>
+          <div class="portfolio-card-inner">
+            <div class="portfolio-card-label">Virtual cigar lounge</div>
+            <h3 class="portfolio-title">Herf Station</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Lounge</span>
+              <span class="portfolio-tag">Live rooms</span>
+              <span class="portfolio-tag">Premium</span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <a href="#" class="portfolio-card" aria-label="Vanta Shift">
-            <div class="portfolio-card-visual vs"></div>
-            <div class="portfolio-card-inner">
-              <div class="portfolio-card-label">Shift planning</div>
-              <h3 class="portfolio-title">Vanta Shift</h3>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">Rotas</span>
-                <span class="portfolio-tag">Hours</span>
-                <span class="portfolio-tag">Earnings</span>
-              </div>
+        <a href="#" class="portfolio-card" aria-label="Vanta Shift">
+          <div class="portfolio-card-visual vs"></div>
+          <div class="portfolio-card-inner">
+            <div class="portfolio-card-label">Shift planning</div>
+            <h3 class="portfolio-title">Vanta Shift</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Rotas</span>
+              <span class="portfolio-tag">Hours</span>
+              <span class="portfolio-tag">Earnings</span>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </section>
 

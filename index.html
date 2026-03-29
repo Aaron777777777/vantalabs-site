@@ -1,36 +1,541 @@
-cat > ~/Downloads/vantalabs_site/index.html <<'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanta Labs</title>
-  <meta
-    name="description"
-    content="Vanta Labs is an independent UK software company building clean digital products."
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Vanta Labs is an independent UK software company building clean digital products." />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --gold: #d4af37;
+      --line: rgba(255,255,255,0.10);
+      --line-soft: rgba(255,255,255,0.06);
+      --muted: rgba(255,255,255,0.70);
+      --muted-soft: rgba(255,255,255,0.50);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      width: 100%;
+      padding: 24px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      font-weight: 500;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .top-nav a {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.9);
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .top-nav a:hover {
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.55);
+    }
+
+    .hero-inner,
+    .section-wrap {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    .section-wrap.narrow {
+      max-width: 920px;
+    }
+
+    .home-hero {
+      padding: 92px 44px 42px;
+    }
+
+    .eyebrow {
+      margin-bottom: 26px;
+      font-size: 13px;
+      letter-spacing: 0.20em;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .headline {
+      margin: 0;
+      max-width: 1180px;
+      font-size: clamp(28px, 3.4vw, 48px);
+      line-height: 1.12;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .portfolio-preview {
+      padding: 44px 44px 120px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      min-height: 220px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(212, 175, 55, 0.05), transparent 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 26px;
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.32);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+    }
+
+    .portfolio-title {
+      text-align: center;
+      font-size: clamp(22px, 2vw, 32px);
+      line-height: 1.1;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    .about-section {
+      padding: 48px 44px 96px;
+    }
+
+    .section-title {
+      margin: 0 0 24px;
+      font-size: clamp(34px, 4.6vw, 58px);
+      line-height: 1.08;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+    }
+
+    .about-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .body-large {
+      margin: 0;
+      font-size: clamp(22px, 2vw, 26px);
+      line-height: 1.38;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .body-copy {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .company-meta {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .meta-label {
+      color: var(--muted-soft);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .meta-value {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 16px;
+      text-align: right;
+    }
+
+    .contact-section {
+      padding: 6px 44px 110px;
+    }
+
+    .contact-title-wrap {
+      margin: 0 auto 48px;
+    }
+
+    .contact-title {
+      margin: 0;
+      font-size: clamp(40px, 5.4vw, 76px);
+      line-height: 1;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .info-label {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      color: var(--muted-soft);
+    }
+
+    .info-text {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    .info-text a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .contact-form-panel {
+      width: 100%;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      background: transparent;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 0 0 16px;
+      outline: none;
+      resize: none;
+      font-family: inherit;
+      border-radius: 0;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-bottom-color: rgba(212, 175, 55, 0.75);
+    }
+
+    .form-group textarea {
+      min-height: 160px;
+      padding-top: 6px;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.34);
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .submit-button {
+      align-self: flex-start;
+      border: 0;
+      background: var(--gold);
+      color: #000000;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 16px 28px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      border-radius: 0;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    @media (max-width: 1100px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-card {
+        min-height: 170px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .contact-sidebar {
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 18px 18px;
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      .brand {
+        font-size: 16px;
+        letter-spacing: 0.18em;
+      }
+
+      .top-nav {
+        gap: 16px;
+      }
+
+      .top-nav a {
+        font-size: 15px;
+        padding-bottom: 4px;
+      }
+
+      .home-hero {
+        padding: 64px 18px 26px;
+      }
+
+      .portfolio-preview,
+      .about-section,
+      .contact-section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .portfolio-preview {
+        padding-top: 28px;
+        padding-bottom: 72px;
+      }
+
+      .about-section {
+        padding-top: 28px;
+        padding-bottom: 72px;
+      }
+
+      .contact-section {
+        padding-top: 6px;
+        padding-bottom: 80px;
+      }
+
+      .eyebrow {
+        margin-bottom: 18px;
+        font-size: 12px;
+      }
+
+      .headline {
+        font-size: clamp(26px, 8.2vw, 38px);
+        line-height: 1.14;
+      }
+
+      .portfolio-grid {
+        gap: 16px;
+      }
+
+      .portfolio-card {
+        min-height: 132px;
+        border-radius: 20px;
+        padding: 18px;
+      }
+
+      .portfolio-title {
+        font-size: clamp(18px, 7vw, 26px);
+        letter-spacing: 0.06em;
+      }
+
+      .section-title {
+        margin-bottom: 18px;
+        font-size: clamp(28px, 9vw, 40px);
+      }
+
+      .body-large {
+        font-size: 22px;
+        line-height: 1.42;
+      }
+
+      .body-copy {
+        font-size: 17px;
+        line-height: 1.72;
+      }
+
+      .company-meta {
+        margin-top: 22px;
+        gap: 14px;
+      }
+
+      .meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .meta-value {
+        text-align: left;
+      }
+
+      .contact-title-wrap {
+        margin-bottom: 34px;
+      }
+
+      .contact-title {
+        font-size: clamp(32px, 11vw, 50px);
+      }
+
+      .contact-layout {
+        gap: 34px;
+      }
+
+      .info-text {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .contact-form {
+        gap: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .form-group {
+        gap: 8px;
+      }
+
+      .form-group label {
+        font-size: 15px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        font-size: 17px;
+        padding-bottom: 14px;
+      }
+
+      .form-group textarea {
+        min-height: 140px;
+      }
+
+      .submit-button {
+        width: 100%;
+        text-align: center;
+        padding: 16px 22px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <a href="index.html" class="brand">VANTA LABS</a>
+    <a href="#top" class="brand">VANTA LABS</a>
 
     <nav class="top-nav" aria-label="Main navigation">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero home-hero">
       <div class="hero-inner">
         <div class="eyebrow">ABOUT US</div>
-
         <h1 class="headline">
-          We’re an independent UK software company
-          that builds clean digital products by stripping things back to what
-          matters.
+          We’re an independent UK software company that builds clean digital
+          products by stripping things back to what matters.
           <span class="gold">That’s what Vanta Labs is built on.</span>
         </h1>
       </div>
@@ -39,19 +544,133 @@ cat > ~/Downloads/vantalabs_site/index.html <<'EOF'
     <section class="portfolio-preview" aria-label="Featured apps">
       <div class="portfolio-grid">
         <a href="#" class="portfolio-card" aria-label="Cigar Ledger">
-          <img src="images/cigar-ledger.png" alt="Cigar Ledger app screenshot" />
+          <div class="portfolio-title">Cigar Ledger</div>
         </a>
-
         <a href="#" class="portfolio-card" aria-label="Herf Station">
-          <img src="images/herf-station.png" alt="Herf Station app screenshot" />
+          <div class="portfolio-title">Herf Station</div>
         </a>
-
         <a href="#" class="portfolio-card" aria-label="Vanta Shift">
-          <img src="images/vanta-shift.png" alt="Vanta Shift app screenshot" />
+          <div class="portfolio-title">Vanta Shift</div>
         </a>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-wrap narrow">
+        <div class="eyebrow">ABOUT</div>
+        <h2 class="section-title">Built around clarity, restraint and useful products.</h2>
+
+        <div class="about-copy">
+          <p class="body-large">
+            Vanta Labs is an independent UK software company focused on building
+            clean digital products with a simple idea at the core: remove the
+            noise, keep what matters, and make the experience feel sharp, useful and intentional.
+          </p>
+
+          <p class="body-copy">
+            We believe good software should feel clear from the first second.
+            That means stronger fundamentals, less clutter, better visual restraint,
+            and products that solve real problems without unnecessary complexity.
+          </p>
+
+          <p class="body-copy">
+            Our work is guided by premium design, practical execution, and a bias
+            toward simple systems that are easy to understand and easy to use.
+          </p>
+        </div>
+
+        <div class="company-meta">
+          <div class="meta-row">
+            <span class="meta-label">Company number</span>
+            <span class="meta-value">17095243</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Manchester, United Kingdom</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Contact</span>
+            <span class="meta-value">aaron@vantalabs.co.uk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="section-wrap">
+        <div class="contact-title-wrap">
+          <div class="eyebrow">CONTACT</div>
+          <h2 class="contact-title">Get in touch</h2>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="contact-sidebar">
+            <div class="info-block">
+              <div class="info-label">EMAIL</div>
+              <p class="info-text"><a href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a></p>
+            </div>
+
+            <div class="info-block">
+              <div class="info-label">ADDRESS</div>
+              <p class="info-text">
+                382 Kingsway<br />
+                Manchester<br />
+                M19 1PL<br />
+                United Kingdom
+              </p>
+            </div>
+
+            <div class="info-block">
+              <div class="info-label">COMPANY NUMBER</div>
+              <p class="info-text">17095243</p>
+            </div>
+          </aside>
+
+          <section class="contact-form-panel">
+            <form class="contact-form" action="https://formspree.io/f/xzdkeebr" method="POST">
+              <input type="hidden" name="_subject" value="New Vanta Labs website enquiry" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first_name">First name*</label>
+                  <input id="first_name" name="first_name" type="text" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="last_name">Last name*</label>
+                  <input id="last_name" name="last_name" type="text" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email*</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Company / brand</label>
+                  <input id="company" name="company" type="text" />
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Message*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us a bit about your project, product or enquiry."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-button">Send message</button>
+            </form>
+          </section>
+        </div>
       </div>
     </section>
   </main>
 </body>
 </html>
-EOF

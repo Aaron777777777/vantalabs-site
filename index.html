@@ -7,15 +7,17 @@
   <meta name="description" content="Official website of Vanta Labs NW Ltd." />
   <style>
     :root {
-      --purple-1: #2a136e;
-      --purple-2: #4f1ab3;
-      --purple-3: #6f3bda;
-      --bg: #f7f7fb;
-      --surface: #ffffff;
-      --text: #111111;
-      --muted: #666a73;
-      --line: #e8e8ef;
-      --shadow: 0 18px 45px rgba(27, 23, 54, 0.08);
+      --bg: #070707;
+      --bg-soft: #0d0d0d;
+      --surface: #111111;
+      --surface-2: #151515;
+      --text: #f3f3f3;
+      --muted: #a5a5a5;
+      --gold: #d4af37;
+      --gold-soft: rgba(212, 175, 55, 0.12);
+      --gold-line: rgba(212, 175, 55, 0.24);
+      --line: rgba(255, 255, 255, 0.07);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
       --radius: 24px;
       --max: 1120px;
     }
@@ -30,9 +32,11 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
       color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.06), transparent 30%),
+        linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
     }
 
     a {
@@ -50,8 +54,8 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(10px);
-      background: rgba(24, 12, 62, 0.86);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(8, 8, 8, 0.84);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav {
@@ -66,59 +70,38 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      color: #fff;
       font-weight: 700;
       letter-spacing: 0.01em;
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
       display: grid;
       place-items: center;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: #fff;
+      color: var(--gold);
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
+      border: 1px solid var(--gold-line);
+      background: linear-gradient(180deg, #151515 0%, #0d0d0d 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
     .nav-links {
       display: flex;
       gap: 24px;
-      color: rgba(255,255,255,0.82);
+      color: var(--muted);
       font-size: 0.95rem;
     }
 
-    .nav-links a:hover {
-      color: #fff;
+    .nav-links a:hover,
+    .text-link:hover {
+      color: var(--gold);
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--purple-1) 0%, var(--purple-2) 58%, var(--purple-3) 100%);
-      color: #fff;
-      padding: 88px 0 130px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 110px;
-      background: var(--bg);
-      border-top-left-radius: 50% 100%;
-      border-top-right-radius: 50% 100%;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 860px;
+      padding: 92px 0 34px;
     }
 
     .eyebrow {
@@ -126,28 +109,49 @@
       align-items: center;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.16);
-      font-size: 0.82rem;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-line);
+      color: #f0d98a;
+      font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .hero-main,
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 38px;
+    }
+
     h1 {
-      margin: 18px 0 16px;
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      margin: 18px 0 14px;
+      font-size: clamp(2.9rem, 6vw, 5rem);
       line-height: 0.94;
       letter-spacing: -0.05em;
-      max-width: 780px;
+      max-width: 760px;
     }
 
     .hero-copy {
       margin: 0;
-      max-width: 760px;
-      font-size: 1.1rem;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.08rem;
       line-height: 1.9;
-      color: rgba(255,255,255,0.86);
     }
 
     .hero-actions {
@@ -170,9 +174,9 @@
     }
 
     .button {
-      background: #fff;
-      color: #1a1238;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+      background: var(--gold);
+      color: #111;
+      box-shadow: 0 8px 24px rgba(212,175,55,0.2);
     }
 
     .button:hover,
@@ -181,15 +185,59 @@
     }
 
     .button-ghost {
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
     }
 
-    main {
-      margin-top: -56px;
-      position: relative;
-      z-index: 2;
+    .button-ghost:hover {
+      border-color: var(--gold-line);
+      color: var(--gold);
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      align-content: start;
+      gap: 14px;
+    }
+
+    .side-block {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(255,255,255,0.01));
+      border: 1px solid rgba(212,175,55,0.15);
+    }
+
+    .side-block h3 {
+      margin: 0 0 8px;
+      color: #f0d98a;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .side-block p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.97rem;
+    }
+
+    .side-highlight {
+      padding: 20px 2px 4px;
+    }
+
+    .side-highlight strong {
+      display: block;
+      font-size: 2.1rem;
+      letter-spacing: -0.04em;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .side-highlight span {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     section {
@@ -197,89 +245,66 @@
     }
 
     .section-head {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .section-head h2 {
       margin: 0 0 8px;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-size: clamp(1.8rem, 3vw, 2.35rem);
       letter-spacing: -0.03em;
     }
 
     .section-head p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.85;
+      line-height: 1.82;
       max-width: 760px;
     }
 
     .panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      padding: 28px;
     }
 
-    .intro-card {
-      padding: 32px;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .intro-copy {
+    .about-copy {
+      margin: 0;
       color: var(--muted);
       line-height: 1.9;
-      font-size: 1.03rem;
-      margin: 0;
+      font-size: 1.02rem;
+      max-width: 860px;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 18px;
-      background: #fafafe;
-      border: 1px solid var(--line);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.8rem;
-      line-height: 1;
-      color: var(--purple-2);
-      margin-bottom: 6px;
-      letter-spacing: -0.03em;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .grid-3 {
+    .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
     .feature {
-      padding: 24px;
+      padding: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-number {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      border: 1px solid var(--gold-line);
+      background: rgba(212,175,55,0.08);
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
     .feature h3 {
       margin: 0 0 10px;
       font-size: 1.05rem;
-      color: var(--purple-2);
+      color: var(--text);
     }
 
     .feature p {
@@ -294,8 +319,11 @@
       gap: 16px;
     }
 
-    .contact-panel {
-      padding: 24px;
+    .contact-item {
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .contact-list {
@@ -303,17 +331,10 @@
       gap: 12px;
     }
 
-    .contact-item {
-      padding: 15px 16px;
-      border-radius: 16px;
-      background: #fafafe;
-      border: 1px solid var(--line);
-    }
-
     .label {
       display: block;
       margin-bottom: 4px;
-      color: var(--purple-2);
+      color: #f0d98a;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -326,17 +347,14 @@
       line-height: 1.85;
     }
 
-    .text-link {
-      color: var(--purple-2);
-      font-weight: 600;
-    }
-
-    .text-link:hover {
-      text-decoration: underline;
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.25), transparent);
+      margin: 8px 0 4px;
     }
 
     footer {
-      padding: 38px 0 54px;
+      padding: 40px 0 54px;
       color: var(--muted);
     }
 
@@ -345,7 +363,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 18px;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 22px;
     }
 
@@ -355,11 +373,10 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 960px) {
-      .intro-grid,
-      .grid-3,
-      .contact-grid,
-      .stats {
+    @media (max-width: 940px) {
+      .hero-grid,
+      .features,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -371,17 +388,12 @@
 
       .hero {
         padding-top: 68px;
-        padding-bottom: 110px;
       }
 
-      .hero::after {
-        height: 70px;
-      }
-
-      .intro-card,
-      .feature,
-      .contact-panel {
-        padding: 20px;
+      .hero-main,
+      .panel,
+      .feature {
+        padding: 22px;
       }
 
       .footer-row {
@@ -401,80 +413,92 @@
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
+        <a href="#services">Focus</a>
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="top">
+  <main id="top">
     <div class="wrap">
-      <div class="hero-inner">
+      <section class="hero">
         <span class="eyebrow">Official Website</span>
-        <h1>VANTA LABS NW LTD</h1>
-        <p class="hero-copy">
-          Independent UK software company building clean, premium mobile apps and digital products with practical everyday value.
-        </p>
 
-        <div class="hero-actions">
-          <a class="button" href="#contact">Contact</a>
-          <a class="button-ghost" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <h1>VANTA LABS NW LTD</h1>
+            <p class="hero-copy">
+              Independent UK software company building clean, premium mobile apps and digital products with practical everyday value.
+            </p>
 
-  <main>
-    <div class="wrap">
-      <section id="about">
-        <div class="panel intro-card">
-          <div class="intro-grid">
-            <div>
-              <div class="section-head">
-                <h2>About</h2>
-                <p>
-                  Vanta Labs creates focused digital products with a simple philosophy: keep them sharp, purposeful, and easy to use.
-                </p>
-              </div>
-
-              <p class="intro-copy">
-                Our work centres on practical software, premium visual design, and straightforward user experience. We prefer clarity over clutter and build products intended to solve specific problems cleanly and effectively.
-              </p>
-            </div>
-
-            <div class="stats">
-              <div class="stat">
-                <strong>UK</strong>
-                <span>Registered limited company</span>
-              </div>
-              <div class="stat">
-                <strong>Clean</strong>
-                <span>Focused product design approach</span>
-              </div>
-              <div class="stat">
-                <strong>Direct</strong>
-                <span>Simple support and contact path</span>
-              </div>
+            <div class="hero-actions">
+              <a class="button" href="#contact">Contact</a>
+              <a class="button-ghost" href="mailto:aaron@vantalabs.co.uk">aaron@vantalabs.co.uk</a>
             </div>
           </div>
+
+          <aside class="panel hero-side">
+            <div class="side-block">
+              <h3>Independent</h3>
+              <p>Built with a focused, product-first approach centred on clarity, quality, and execution.</p>
+            </div>
+
+            <div class="side-block">
+              <h3>Design-led</h3>
+              <p>Products are shaped around clean interfaces, premium presentation, and straightforward usability.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="side-highlight">
+              <strong>UK</strong>
+              <span>Registered limited company</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section>
-        <div class="grid-3">
-          <div class="panel feature">
-            <h3>Independent</h3>
-            <p>Built with a lean, product-first approach focused on clarity, quality, and execution.</p>
+      <section id="about">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>
+            Vanta Labs creates focused digital products with a simple philosophy: keep them sharp, purposeful, and easy to use.
+          </p>
+        </div>
+
+        <div class="panel">
+          <p class="about-copy">
+            Our work centres on practical software, premium visual design, and straightforward user experience. We favour simplicity over excess and clarity over clutter, building products intended to solve specific problems cleanly and effectively.
+          </p>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-head">
+          <h2>Focus</h2>
+          <p>
+            We build digital products with a clear bias toward usability, polish, and practical value.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-number">01</div>
+            <h3>Clean product design</h3>
+            <p>Interfaces designed to feel refined, minimal, and easy to navigate without unnecessary noise.</p>
           </div>
 
-          <div class="panel feature">
-            <h3>Design-led</h3>
-            <p>Products are shaped around clean interfaces, premium presentation, and straightforward usability.</p>
+          <div class="feature">
+            <div class="feature-number">02</div>
+            <h3>Practical utility</h3>
+            <p>Products built around specific workflows and real use cases rather than broad, unfocused feature sets.</p>
           </div>
 
-          <div class="panel feature">
-            <h3>Practical</h3>
-            <p>Every product is designed to solve specific user problems clearly rather than add noise or clutter.</p>
+          <div class="feature">
+            <div class="feature-number">03</div>
+            <h3>Premium presentation</h3>
+            <p>Strong attention to detail in layout, structure, and visual consistency across each product experience.</p>
           </div>
         </div>
       </section>
@@ -488,7 +512,7 @@
         </div>
 
         <div class="contact-grid">
-          <div class="panel contact-panel">
+          <div class="panel">
             <div class="contact-list">
               <div class="contact-item">
                 <span class="label">Company</span>
@@ -507,12 +531,12 @@
             </div>
           </div>
 
-          <div class="panel contact-panel">
+          <div class="panel">
             <h2 style="margin-top:0; margin-bottom:10px; font-size:1.45rem;">Privacy</h2>
             <p class="privacy-copy">
               Our privacy policy explains how Vanta Labs handles website enquiries and general app-related information.
             </p>
-            <a class="button-ghost" style="color:#111; border-color:#d9d9e5; background:#fff;" href="privacy.html">Open privacy policy</a>
+            <a class="button-ghost" href="privacy.html">Open privacy policy</a>
           </div>
         </div>
       </section>
@@ -525,6 +549,7 @@
 
       <div class="footer-links">
         <a href="#about">About</a>
+        <a href="#services">Focus</a>
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>

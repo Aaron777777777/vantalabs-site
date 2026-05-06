@@ -51,7 +51,7 @@
         radial-gradient(circle at 18% 0%, rgba(212,175,55,0.065), transparent 26%),
         radial-gradient(circle at 86% 6%, rgba(212,175,55,0.028), transparent 24%),
         linear-gradient(180deg, #080705 0%, #030302 34%, #000 58%, #050505 100%);
-      line-height: 1.55;
+      line-height: 1.65;
     }
 
     body::before {
@@ -142,43 +142,39 @@
     }
 
     .section {
-      padding: 84px 0;
+      padding: 96px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .section-head {
-      max-width: 740px;
-      margin-bottom: 42px;
-    }
-
-    .section-head.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
+      max-width: 760px;
+      margin-bottom: 52px;
     }
 
     h2 {
       max-width: 760px;
       font-size: clamp(34px, 5.6vw, 64px);
-      line-height: 0.96;
+      line-height: 0.98;
       letter-spacing: -0.06em;
       font-weight: 800;
     }
 
     .section-head p {
-      margin-top: 16px;
+      max-width: 680px;
+      margin-top: 24px;
       color: var(--muted);
       font-size: 18px;
+      line-height: 1.75;
     }
 
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 44px;
     }
 
     .app-card {
-      padding: 28px 0 0;
+      padding-top: 30px;
       border-top: 1px solid var(--line);
     }
 
@@ -188,7 +184,7 @@
       height: 78px;
       border-radius: 20px;
       object-fit: cover;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       box-shadow: 0 18px 34px rgba(0,0,0,0.42);
     }
 
@@ -196,19 +192,20 @@
       font-size: 30px;
       line-height: 1.05;
       letter-spacing: -0.045em;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     .app-card p {
-      max-width: 420px;
+      max-width: 430px;
       color: var(--muted);
       font-size: 16px;
+      line-height: 1.75;
     }
 
     .play-link {
       display: inline-flex;
       align-items: center;
-      margin-top: 22px;
+      margin-top: 26px;
       color: var(--gold-soft);
       font-size: 15px;
       font-weight: 800;
@@ -229,102 +226,47 @@
 
     .copy-block {
       border-top: 1px solid var(--line);
-      padding-top: 24px;
+      padding-top: 30px;
     }
 
     .copy-block h3 {
-      font-size: 27px;
+      font-size: 28px;
       line-height: 1.08;
       letter-spacing: -0.045em;
-      margin-bottom: 14px;
+      margin-bottom: 22px;
     }
 
-    .copy-block p,
-    .copy-block li {
+    .copy-block p {
       color: var(--muted);
       font-size: 17px;
+      line-height: 1.85;
     }
 
     .copy-block p + p {
-      margin-top: 14px;
-    }
-
-    ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    li::before {
-      content: "✓";
-      color: var(--gold-soft);
-      margin-right: 10px;
-      font-weight: 900;
-    }
-
-    .saving {
-      margin-top: 48px;
-      padding-top: 26px;
-      border-top: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .saving h3 {
-      font-size: clamp(28px, 4.2vw, 46px);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-    }
-
-    .saving p {
-      max-width: 620px;
-      margin: 12px auto 0;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .cta-line {
-      margin-top: 28px;
-    }
-
-    .pill-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border: 1px solid rgba(212,175,55,0.34);
-      border-radius: 999px;
-      color: var(--gold-soft);
-      font-size: 15px;
-      font-weight: 850;
-      background: rgba(212,175,55,0.045);
-    }
-
-    .pill-link::after {
-      content: "→";
-      margin-left: 9px;
+      margin-top: 18px;
     }
 
     .simple-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 34px;
     }
 
     .simple-item {
       border-top: 1px solid var(--line);
-      padding-top: 22px;
+      padding-top: 28px;
     }
 
     .simple-item h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
+      margin-bottom: 14px;
+      font-size: 22px;
       letter-spacing: -0.035em;
     }
 
     .simple-item p {
       color: var(--muted);
       font-size: 16px;
+      line-height: 1.8;
     }
 
     .about {
@@ -374,7 +316,6 @@
         grid-template-columns: 1fr;
       }
 
-      nav a:nth-child(3),
       nav a:nth-child(4) {
         display: none;
       }
@@ -413,13 +354,11 @@
       }
 
       .section {
-        padding: 58px 0;
+        padding: 72px 0;
       }
 
-      .section-head,
-      .section-head.center {
-        text-align: left;
-        margin-bottom: 30px;
+      .section-head {
+        margin-bottom: 38px;
       }
 
       h2 {
@@ -427,13 +366,8 @@
         line-height: 1.04;
       }
 
-      .about h2 {
-        margin-bottom: 30px;
-      }
-
       .section-head p,
       .copy-block p,
-      .copy-block li,
       .simple-item p,
       .about p,
       .contact a,
@@ -441,23 +375,30 @@
         font-size: 16px;
       }
 
+      .apps-grid,
+      .split,
+      .simple-grid,
+      .about {
+        gap: 42px;
+      }
+
       .app-card {
-        padding-top: 22px;
+        padding-top: 26px;
       }
 
       .app-icon {
         width: 66px;
         height: 66px;
         border-radius: 17px;
-        margin-bottom: 18px;
+        margin-bottom: 22px;
       }
 
       .app-card h3 {
         font-size: 28px;
       }
 
-      .pill-link {
-        width: 100%;
+      .about h2 {
+        margin-bottom: 30px;
       }
 
       footer {
@@ -531,14 +472,14 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <span class="kicker">Premium cigar apps</span>
-        <h1 id="hero-title">Cigar prices. Live lounges. Built for cigar smokers.</h1>
-        <p>Compare cigar prices in the UK, check EU import savings and join live virtual cigar lounges.</p>
+        <h1 id="hero-title">Compare cigar prices. Join live lounges.</h1>
+        <p>Compare UK cigar prices, check EU landed import costs and join live cigar lounges built for cigar smokers.</p>
       </section>
 
       <section id="apps" class="section" aria-labelledby="apps-title">
         <div class="section-head">
           <span class="kicker">Apps</span>
-          <h2 id="apps-title">Two focused apps for cigar smokers.</h2>
+          <h2 id="apps-title">Two premium apps for cigar smokers.</h2>
           <p>One helps you buy smarter. One gives you somewhere to enjoy the smoke.</p>
         </div>
 
@@ -546,14 +487,14 @@
           <article class="app-card">
             <img class="app-icon" src="cl.png" alt="Cigar Ledger app icon" loading="lazy" />
             <h3>Cigar Ledger</h3>
-            <p>Compare UK cigar prices, EU landed costs and box savings before you order.</p>
+            <p>UK cigar price comparison and EU import savings.</p>
             <a class="play-link" href="https://play.google.com/store/apps/details?id=com.aaronsapps.cigarledger" target="_blank" rel="noopener">View on Google Play</a>
           </article>
 
           <article class="app-card">
             <img class="app-icon" src="hs.png" alt="Herf Station app icon" loading="lazy" />
             <h3>Herf Station</h3>
-            <p>Join live cigar lounges online and connect with other cigar smokers.</p>
+            <p>Live virtual cigar lounges for cigar smokers.</p>
             <a class="play-link" href="https://play.google.com/store/apps/details?id=com.vantalabs.herf_station" target="_blank" rel="noopener">View on Google Play</a>
           </article>
         </div>
@@ -562,15 +503,14 @@
       <section id="cigar-prices-uk" class="section" aria-labelledby="cigar-prices-title">
         <div class="section-head">
           <span class="kicker">Cigar Prices UK</span>
-          <h2 id="cigar-prices-title">Find the cheapest cigar prices in the UK.</h2>
-          <p>Compare UK retailers vs EU imports and see where you actually save per cigar and per box.</p>
+          <h2 id="cigar-prices-title">Cigar prices vary massively between retailers.</h2>
+          <p>The same cigar can cost dramatically more depending on where you buy.</p>
         </div>
 
         <div class="split">
           <div class="copy-block">
-            <h3>Cigar prices vary massively between retailers.</h3>
-            <p>The same cigar can cost far more at one UK shop than another — and sometimes less again when importing from Europe.</p>
-            <p>Most smokers either overpay or spend ages checking multiple sites before buying.</p>
+            <h3>Find the best buying route before you order.</h3>
+            <p>Cigar Ledger compares UK retailer pricing against EU landed import cost so you can quickly see where the value really is.</p>
           </div>
         </div>
       </section>
@@ -579,7 +519,7 @@
         <div class="section-head">
           <span class="kicker">Virtual Cigar Lounge</span>
           <h2 id="lounge-title">Already got your cigars? Smoke them with others.</h2>
-          <p>Herf Station gives cigar smokers a place to join live lounges, host private sessions and connect with people who enjoy the same thing.</p>
+          <p>Join live cigar lounges and enjoy cigars with other smokers online.</p>
         </div>
 
         <div class="simple-grid">
@@ -616,7 +556,10 @@
     </main>
 
     <footer>
-      <div>Vanta Labs — premium cigar apps from Manchester, UK</div>
+      <div>
+        <strong>Vanta Labs</strong><br />
+        Premium cigar apps from Manchester, UK.
+      </div>
       <div>© 2026 Vanta Labs</div>
     </footer>
   </div>

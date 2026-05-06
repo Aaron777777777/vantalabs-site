@@ -534,11 +534,11 @@
 
     @media (max-width: 520px) {
       .page {
-        width: min(100% - 26px, 1160px);
+        width: min(100% - 28px, 1160px);
       }
 
       header {
-        padding: 20px 0 12px;
+        padding: 18px 0 10px;
       }
 
       .brand {
@@ -547,48 +547,81 @@
       }
 
       nav {
+        gap: 14px;
         font-size: 13px;
       }
 
+      .hero {
+        padding: 46px 0 46px;
+      }
+
+      .hero::before {
+        display: none;
+      }
+
       .hero h1 {
-        font-size: 39px;
+        font-size: 34px;
         line-height: 1.04;
-        letter-spacing: -0.05em;
+        letter-spacing: -0.045em;
       }
 
       .hero p,
       .section-heading p {
         font-size: 15px;
+        line-height: 1.55;
       }
 
       .section {
-        padding: 48px 0;
+        padding: 42px 0;
       }
 
       .section-heading {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
+        text-align: left;
       }
 
       .section-heading h2 {
-        font-size: 32px;
+        font-size: 31px;
+        letter-spacing: -0.045em;
+      }
+
+      .apps-grid {
+        gap: 14px;
       }
 
       .app-card,
       .panel,
       .money-panel,
       .example-card,
-      .cigar-cta {
-        padding: 20px;
+      .cigar-cta,
+      .seo-item {
+        padding: 18px;
+        border-radius: 20px;
       }
 
       .app-icon {
-        width: 62px;
-        height: 62px;
-        border-radius: 16px;
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        margin-bottom: 18px;
+      }
+
+      .app-card p {
+        min-height: auto;
       }
 
       .store-button {
         width: 100%;
+        padding: 12px 14px;
+      }
+
+      .panel h2 {
+        font-size: 32px;
+      }
+
+      .contact-list a,
+      .contact-list div {
+        font-size: 14px;
       }
     }
   </style>
@@ -674,14 +707,14 @@
 
         <div class="apps-grid">
           <article class="app-card">
-            <img class="app-icon" src="assets/icons/cl.png" alt="Cigar Ledger app icon" loading="lazy" />
+            <img class="app-icon" src="cl.png"},{ alt="Cigar Ledger app icon" loading="lazy" />
             <h3>Cigar Ledger</h3>
             <p>Compare cigar prices in the UK and check better buying routes before you order.</p>
             <a class="store-button" href="https://play.google.com/store/apps/details?id=com.vantalabs.cigar_ledger" target="_blank" rel="noopener">View on Google Play</a>
           </article>
 
           <article class="app-card">
-            <img class="app-icon" src="assets/icons/hs.png" alt="Herf Station app icon" loading="lazy" />
+            <img class="app-icon" src="hs.png"},{ alt="Herf Station app icon" loading="lazy" />
             <h3>Herf Station</h3>
             <p>Join live cigar lounges online and connect with other cigar smokers.</p>
             <a class="store-button" href="https://play.google.com/store/apps/details?id=com.vantalabs.herf_station" target="_blank" rel="noopener">View on Google Play</a>

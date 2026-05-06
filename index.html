@@ -10,15 +10,15 @@
   <meta name="author" content="Vanta Labs" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Vanta Labs | Cigar Prices, Live Lounges & Shift Planning Apps" />
-  <meta property="og:description" content="Explore Cigar Ledger, Herf Station and Vanta Shift — focused Android apps built by Vanta Labs." />
+  <meta property="og:title" content="Vanta Labs | Cigar Prices UK & Live Cigar Lounges" />
+  <meta property="og:description" content="Compare cigar prices in the UK, check EU import savings and join live virtual cigar lounges with Vanta Labs." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vantalabs.co.uk/" />
   <meta property="og:image" content="https://vantalabs.co.uk/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vanta Labs | Focused Android Apps" />
-  <meta name="twitter:description" content="Cigar price comparison, live cigar lounges and shift planning apps from Vanta Labs." />
+  <meta name="twitter:title" content="Vanta Labs | Cigar Prices UK & Live Cigar Lounges" />
+  <meta name="twitter:description" content="Cigar price comparison and live virtual cigar lounges from Vanta Labs." />
   <meta name="twitter:image" content="https://vantalabs.co.uk/og-image.png" />
 
   <link rel="canonical" href="https://vantalabs.co.uk/" />
@@ -133,18 +133,18 @@
     }
 
     .hero {
-      min-height: calc(100vh - 92px);
+      min-height: 72vh;
       display: grid;
       place-items: center;
       text-align: center;
-      padding: 70px 0 132px;
+      padding: 76px 0 92px;
       position: relative;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      inset: 24px 0 70px;
+      inset: 18px 0 42px;
       border-radius: 34px;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.018), rgba(0,0,0,0.68)),
@@ -285,12 +285,17 @@
     .store-button {
       display: inline-flex;
       align-items: center;
-      margin-top: 14px;
+      justify-content: center;
+      margin-top: 18px;
+      padding: 11px 15px;
+      border-radius: 999px;
       color: var(--text);
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.09);
       font-size: 13.5px;
-      font-weight: 600;
-      opacity: 0.78;
-      transition: opacity 130ms ease;
+      font-weight: 700;
+      opacity: 0.9;
+      transition: opacity 130ms ease, border-color 130ms ease, transform 130ms ease;
     }
 
     .store-button span {
@@ -305,6 +310,8 @@
 
     .store-button:hover {
       opacity: 1;
+      border-color: rgba(212,175,55,0.28);
+      transform: translateY(-1px);
     }
 
     .store-button:hover::after {
@@ -490,13 +497,23 @@
     }
 
     @media (max-width: 900px) {
-      nav a:not(:first-child) {
+      nav {
+        gap: 16px;
+      }
+
+      nav a:nth-child(3),
+      nav a:nth-child(4) {
         display: none;
       }
 
       .hero {
-        min-height: calc(100vh - 78px);
-        padding: 54px 0 116px;
+        min-height: auto;
+        padding: 76px 0 62px;
+      }
+
+      .hero::before {
+        inset: 16px 0 22px;
+        border-radius: 28px;
       }
 
       .apps-grid,
@@ -517,34 +534,61 @@
 
     @media (max-width: 520px) {
       .page {
-        width: min(100% - 28px, 1160px);
+        width: min(100% - 26px, 1160px);
       }
 
       header {
-        padding: 22px 0;
+        padding: 20px 0 12px;
       }
 
       .brand {
         font-size: 12px;
+        letter-spacing: 0.18em;
+      }
+
+      nav {
+        font-size: 13px;
       }
 
       .hero h1 {
-        font-size: 43px;
-        letter-spacing: -0.055em;
+        font-size: 39px;
+        line-height: 1.04;
+        letter-spacing: -0.05em;
       }
 
       .hero p,
       .section-heading p {
-        font-size: 15.5px;
+        font-size: 15px;
       }
 
       .section {
-        padding: 58px 0;
+        padding: 48px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 24px;
+      }
+
+      .section-heading h2 {
+        font-size: 32px;
       }
 
       .app-card,
-      .panel {
-        padding: 22px;
+      .panel,
+      .money-panel,
+      .example-card,
+      .cigar-cta {
+        padding: 20px;
+      }
+
+      .app-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 16px;
+      }
+
+      .store-button {
+        width: 100%;
       }
     }
   </style>
@@ -555,7 +599,7 @@
     "@type": "Organization",
     "name": "Vanta Labs",
     "url": "https://vantalabs.co.uk/",
-    "description": "Vanta Labs builds focused Android apps including cigar price comparison, virtual cigar lounges and shift planning tools.",
+    "description": "Vanta Labs builds focused Android apps for cigar price comparison and virtual cigar lounges.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Manchester",
@@ -563,8 +607,7 @@
     },
     "brand": [
       { "@type": "Brand", "name": "Cigar Ledger" },
-      { "@type": "Brand", "name": "Herf Station" },
-      { "@type": "Brand", "name": "Vanta Shift" }
+      { "@type": "Brand", "name": "Herf Station" }
     ]
   }
   </script>
@@ -575,8 +618,7 @@
     "@type": "ItemList",
     "itemListElement": [
       {"@type": "SoftwareApplication", "position": 1, "name": "Cigar Ledger", "applicationCategory": "LifestyleApplication", "operatingSystem": "Android", "description": "A UK cigar price comparison app for checking cigar prices, retailer prices and import estimates."},
-      {"@type": "SoftwareApplication", "position": 2, "name": "Herf Station", "applicationCategory": "SocialNetworkingApplication", "operatingSystem": "Android", "description": "A virtual cigar lounge app for joining live lounges and connecting with other cigar smokers."},
-      {"@type": "SoftwareApplication", "position": 3, "name": "Vanta Shift", "applicationCategory": "ProductivityApplication", "operatingSystem": "Android", "description": "A shift planner and rota app for organising rotating work schedules."}
+      {"@type": "SoftwareApplication", "position": 2, "name": "Herf Station", "applicationCategory": "SocialNetworkingApplication", "operatingSystem": "Android", "description": "A virtual cigar lounge app for joining live lounges and connecting with other cigar smokers."}
     ]
   }
   </script>
@@ -595,11 +637,6 @@
         "@type": "Question",
         "name": "Is there an app for live cigar lounges?",
         "acceptedAnswer": {"@type": "Answer", "text": "Herf Station is a virtual cigar lounge app for joining live rooms and connecting with other cigar smokers online."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is a simple shift planner app for rotating schedules?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Vanta Shift helps users plan rotating shifts, manage rota patterns and stay organised around work schedules."}
       }
     ]
   }
@@ -637,14 +674,14 @@
 
         <div class="apps-grid">
           <article class="app-card">
-           <img class="app-icon" src="cl.png" alt="Cigar Ledger app icon" loading="lazy" />
+            <img class="app-icon" src="assets/icons/cl.png" alt="Cigar Ledger app icon" loading="lazy" />
             <h3>Cigar Ledger</h3>
             <p>Compare cigar prices in the UK and check better buying routes before you order.</p>
             <a class="store-button" href="https://play.google.com/store/apps/details?id=com.vantalabs.cigar_ledger" target="_blank" rel="noopener">View on Google Play</a>
           </article>
 
           <article class="app-card">
-            <img class="app-icon" src="hs.png" alt="Herf Station app icon" loading="lazy" />
+            <img class="app-icon" src="assets/icons/hs.png" alt="Herf Station app icon" loading="lazy" />
             <h3>Herf Station</h3>
             <p>Join live cigar lounges online and connect with other cigar smokers.</p>
             <a class="store-button" href="https://play.google.com/store/apps/details?id=com.vantalabs.herf_station" target="_blank" rel="noopener">View on Google Play</a>

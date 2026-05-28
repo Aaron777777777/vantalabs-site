@@ -16,4 +16,19 @@
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://vantalabs.co.uk/cigar-price-comparison.html</loc>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://vantalabs.co.uk/best-cigar-app.html</loc>
+    <priority>0.83</priority>
+  </url>
+
+  <url>
+    <loc>https://vantalabs.co.uk/uk-cigar-prices.html</loc>
+    <priority>0.82</priority>
+  </url>
+
 </urlset>

@@ -83,6 +83,16 @@
 
     nav a:hover { color: var(--text); }
 
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--gold);
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
     .hero {
       min-height: 560px;
       display: grid;
@@ -302,8 +312,11 @@
       }
 
       nav {
-        gap: 12px;
-        font-size: 12px;
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
       }
 
       .hero {
@@ -417,6 +430,7 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="menu-button" aria-label="Open menu">☰</button>
     </header>
 
     <main id="top">

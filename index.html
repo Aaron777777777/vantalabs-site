@@ -503,6 +503,71 @@
 }
 </style>
 
+
+<style id="vanta-contact-mobile-fix">
+#contact .contactForm {
+  max-width: 760px !important;
+  margin-top: 36px !important;
+  display: grid !important;
+  gap: 20px !important;
+}
+
+#contact .contactFormGrid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+}
+
+#contact .contactForm label {
+  display: grid !important;
+  gap: 10px !important;
+  font-weight: 700 !important;
+}
+
+#contact .contactForm input:not([type="hidden"]) {
+  width: 100% !important;
+  height: 58px !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+  box-sizing: border-box !important;
+}
+
+#contact .contactForm textarea {
+  width: 100% !important;
+  height: 180px !important;
+  min-height: 180px !important;
+  padding: 14px 16px !important;
+  box-sizing: border-box !important;
+  resize: vertical !important;
+}
+
+@media (max-width: 700px) {
+  #contact {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  #contact .contactForm {
+    margin-top: 30px !important;
+    gap: 18px !important;
+  }
+
+  #contact .contactFormGrid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  #contact .contactForm input:not([type="hidden"]) {
+    height: 56px !important;
+  }
+
+  #contact .contactForm textarea {
+    height: 170px !important;
+    min-height: 170px !important;
+  }
+}
+</style>
+
 </head>
 
 <body>

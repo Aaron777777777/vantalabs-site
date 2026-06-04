@@ -4,33 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cigar Prices UK, Cheapest Cigars & Virtual Cigar Lounges | Vanta Labs</title>
-  <meta name="description" content="Vanta Labs builds premium cigar apps for UK cigar smokers. Compare UK cigar prices, check EU landed import costs and join live virtual cigar lounges." />
+  <title>Vanta Labs | Independent Software Studio</title>
+  <meta name="description" content="Vanta Labs is an independent software studio building focused apps for passionate communities." />
   <meta name="author" content="Vanta Labs" />
   <meta name="robots" content="index, follow" />
-
-  <meta property="og:title" content="Vanta Labs | Cigar Prices UK & Live Cigar Lounges" />
-  <meta property="og:description" content="Compare cigar prices in the UK, check EU landed costs and join live virtual cigar lounges." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vantalabs.co.uk/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vanta Labs | Cigar Prices UK & Live Cigar Lounges" />
-  <meta name="twitter:description" content="Premium cigar apps for price comparison and live cigar lounges." />
 
   <link rel="canonical" href="https://vantalabs.co.uk/" />
 
   <style>
     :root {
-      --text: #f4ead8;
-      --muted: rgba(244,234,216,0.74);
-      --soft: rgba(244,234,216,0.44);
-      --line: rgba(244,234,216,0.10);
-      --gold-soft: #efd271;
-      --max: 1080px;
+      --bg: #030303;
+      --text: #f6efe2;
+      --muted: rgba(246,239,226,0.68);
+      --soft: rgba(246,239,226,0.38);
+      --line: rgba(246,239,226,0.10);
+      --gold: #c9a646;
+      --max: 1120px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -38,9 +31,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 18% 0%, rgba(212,175,55,0.055), transparent 26%),
-        radial-gradient(circle at 86% 6%, rgba(212,175,55,0.022), transparent 24%),
-        linear-gradient(180deg, #080705 0%, #030302 34%, #000 58%, #050505 100%);
+        radial-gradient(circle at 24% 0%, rgba(201,166,70,0.08), transparent 28%),
+        linear-gradient(180deg, #080806 0%, #020202 45%, #000 100%);
       line-height: 1.65;
     }
 
@@ -50,11 +42,11 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
-      background-size: 86px 86px;
-      opacity: 0.34;
-      mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.68) 34%, transparent 58%);
+        linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+      background-size: 92px 92px;
+      opacity: 0.42;
+      mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.6) 40%, transparent 70%);
     }
 
     a { color: inherit; text-decoration: none; }
@@ -67,23 +59,23 @@
     }
 
     header {
+      height: 86px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 0;
     }
 
     .brand {
-      color: var(--gold-soft);
+      color: var(--gold);
       font-size: 13px;
-      font-weight: 850;
-      letter-spacing: 0.22em;
+      font-weight: 900;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
-      gap: 24px;
+      gap: 26px;
       color: var(--muted);
       font-size: 14px;
       font-weight: 650;
@@ -92,210 +84,218 @@
     nav a:hover { color: var(--text); }
 
     .hero {
-      min-height: calc(100vh - 90px);
+      min-height: 560px;
       display: grid;
       align-content: center;
-      padding: 40px 0 120px;
-      text-align: center;
+      padding: 40px 0 80px;
       border-bottom: 1px solid var(--line);
     }
 
     .kicker {
       display: block;
-      margin-bottom: 18px;
-      color: var(--soft);
+      margin-bottom: 22px;
+      color: var(--gold);
       font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.24em;
+      font-weight: 900;
+      letter-spacing: 0.26em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 850px;
-      margin: 0 auto;
-      font-size: clamp(44px, 7vw, 92px);
-      line-height: 0.98;
-      letter-spacing: -0.065em;
+      max-width: 860px;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
       font-weight: 800;
     }
 
     .hero p {
       max-width: 650px;
-      margin: 38px auto 0;
+      margin-top: 40px;
       color: var(--muted);
-      font-size: 19px;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.7;
     }
 
     .section {
-      padding: 96px 0;
+      padding: 110px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .section-head {
       max-width: 760px;
-      margin-bottom: 52px;
+      margin-bottom: 62px;
     }
 
     h2 {
-      max-width: 760px;
-      font-size: clamp(34px, 5.6vw, 64px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      font-weight: 800;
+      font-size: clamp(38px, 5.5vw, 72px);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+      font-weight: 850;
     }
 
     .section-head p {
-      max-width: 680px;
-      margin-top: 24px;
+      margin-top: 26px;
       color: var(--muted);
       font-size: 18px;
-      line-height: 1.75;
-    }
-
-    .apps-grid, .simple-grid {
-      display: grid;
-      gap: 44px;
-    }
-
-    .apps-grid { grid-template-columns: repeat(2, 1fr); }
-    .simple-grid { grid-template-columns: repeat(3, 1fr); }
-
-    .app-card, .simple-item, .copy-block {
-      padding-top: 30px;
-      border-top: 1px solid var(--line);
-    }
-
-    .app-card {
-      transition: transform 180ms ease, border-color 180ms ease;
-    }
-
-    .app-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(239,210,113,0.26);
-    }
-
-    .app-icon {
-      display: block;
-      width: 78px;
-      height: 78px;
-      border-radius: 20px;
-      object-fit: cover;
-      margin-bottom: 28px;
-      box-shadow: 0 18px 34px rgba(0,0,0,0.42);
-    }
-
-    .app-card h3, .simple-item h3, .copy-block h3 {
-      font-size: 28px;
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-      margin-bottom: 18px;
-    }
-
-    .app-card p, .simple-item p, .copy-block p {
-      color: var(--muted);
-      font-size: 16px;
       line-height: 1.8;
     }
 
-    .play-link {
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .product {
+      min-height: 400px;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.014));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,166,70,0.36);
+      background:
+        linear-gradient(180deg, rgba(201,166,70,0.09), rgba(255,255,255,0.018));
+    }
+
+    .product-top {
+      display: grid;
+      gap: 26px;
+    }
+
+    .app-icon {
+      width: 86px;
+      height: 86px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 20px 42px rgba(0,0,0,0.45);
+    }
+
+    .product h3 {
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .product p {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .tag {
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
-      margin-top: 28px;
-      padding: 10px 15px;
-      border: 1px solid rgba(239,210,113,0.24);
+      width: fit-content;
+      padding: 10px 14px;
+      border: 1px solid rgba(201,166,70,0.28);
       border-radius: 999px;
-      color: var(--gold-soft);
-      background: rgba(239,210,113,0.045);
-      font-size: 14px;
-      font-weight: 800;
-      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+      color: var(--gold);
+      background: rgba(201,166,70,0.045);
+      font-size: 13px;
+      font-weight: 850;
     }
 
-    .play-link:hover {
-      background: rgba(239,210,113,0.085);
-      border-color: rgba(239,210,113,0.42);
-      transform: translateY(-1px);
+    .button:hover {
+      border-color: rgba(201,166,70,0.52);
+      background: rgba(201,166,70,0.085);
     }
 
-    .play-link::after {
+    .button::after {
       content: "→";
-      margin-left: 9px;
-    }
-
-    .seo-links {
-      opacity: 0.55;
-      transition: opacity 0.2s ease;
-    }
-
-    .seo-links:hover {
-      opacity: 0.8;
-    }
-
-    .seo-links .play-link {
-      font-size: 12px;
-      padding: 7px 12px;
-      color: rgba(239,210,113,0.75);
-      border-color: rgba(239,210,113,0.12);
-      background: transparent;
-    }
-
-    .seo-links .play-link:hover {
-      color: var(--gold-soft);
-      border-color: rgba(239,210,113,0.30);
-      background: rgba(239,210,113,0.04);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 52px;
-      max-width: 760px;
+      margin-left: 8px;
     }
 
     .about {
       display: grid;
-      grid-template-columns: 1.1fr 0.55fr;
-      gap: 96px;
+      grid-template-columns: 1fr 0.75fr;
+      gap: 86px;
       align-items: start;
     }
 
-    .about h2 { margin-bottom: 44px; }
-
-    .about p, .contact a, .contact div {
+    .about p {
       color: var(--muted);
-      font-size: 18px;
+      font-size: 19px;
       line-height: 1.9;
-      max-width: 760px;
+    }
+
+    .statement {
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .statement strong {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--text);
+      font-size: 22px;
+      letter-spacing: -0.035em;
     }
 
     .contact {
       display: grid;
       gap: 18px;
-      align-content: start;
+      color: var(--muted);
+      font-size: 18px;
     }
 
-    .contact a:hover { color: var(--gold-soft); }
+    .contact a:hover { color: var(--gold); }
 
     footer {
       display: flex;
       justify-content: space-between;
-      gap: 18px;
-      padding: 28px 0 32px;
+      gap: 20px;
+      padding: 30px 0 34px;
       color: var(--soft);
       font-size: 13px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
-    @media (max-width: 820px) {
-      .apps-grid, .simple-grid, .about {
+    @media (max-width: 900px) {
+      .products,
+      .about {
         grid-template-columns: 1fr;
+      }
+
+      .product {
+        min-height: 300px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 560px) {
       .page { width: min(100% - 32px, var(--max)); }
 
-      header { padding: 22px 0 14px; }
+      header {
+        height: auto;
+        padding: 24px 0;
+        align-items: flex-start;
+        gap: 18px;
+      }
 
       nav {
         gap: 16px;
@@ -303,119 +303,41 @@
       }
 
       .hero {
-        min-height: calc(100vh - 76px);
-        align-content: center;
-        padding: 20px 0 96px;
-        text-align: left;
-      }
-
-      .hero p {
-        font-size: 16px;
-        margin-top: 28px;
+        min-height: 520px;
+        padding: 30px 0 70px;
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 42px;
         line-height: 1.04;
       }
 
-      .section { padding: 72px 0; }
-
-      .section-head { margin-bottom: 38px; }
-
-      h2 {
-        font-size: 34px;
-        line-height: 1.04;
-      }
-
+      .hero p,
       .section-head p,
-      .app-card p,
-      .copy-block p,
-      .simple-item p,
       .about p,
-      .contact a,
-      .contact div {
+      .contact {
         font-size: 16px;
       }
 
-      .app-icon {
-        width: 66px;
-        height: 66px;
-        border-radius: 17px;
-        margin-bottom: 22px;
+      .section { padding: 78px 0; }
+
+      h2 { font-size: 38px; }
+
+      .product {
+        min-height: 310px;
+        padding: 24px;
+        border-radius: 24px;
       }
 
-      .play-link {
-        padding: 9px 14px;
-        font-size: 13px;
+      .product h3 {
+        font-size: 30px;
       }
 
       footer {
         flex-direction: column;
-        padding: 24px 0 30px;
       }
     }
-
-    .guide-groups {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .guide-panel {
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: rgba(255,255,255,0.018);
-    }
-
-    .guide-panel h3 {
-      color: var(--gold-soft);
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .guide-panel a {
-      display: block;
-      padding: 14px 0;
-      border-top: 1px solid var(--line);
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .guide-panel a:hover {
-      color: var(--gold-soft);
-    }
-
-    @media (max-width: 860px) {
-      .guide-groups {
-        grid-template-columns: 1fr;
-      }
-    }
-
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Vanta Labs",
-    "url": "https://vantalabs.co.uk/",
-    "description": "Vanta Labs builds focused Android apps for cigar price comparison and virtual cigar lounges.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Manchester",
-      "addressCountry": "GB"
-    },
-    "brand": [
-      { "@type": "Brand", "name": "Cigar Ledger" },
-      { "@type": "Brand", "name": "Herf Station" }
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -423,89 +345,74 @@
     <header>
       <a href="#top" class="brand">Vanta Labs</a>
       <nav>
-        <a href="#apps">Apps</a>
-        <a href="#about">Contact</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <h1>Compare cigar prices. Join live lounges.</h1>
-        <p>Premium cigar apps for UK smokers — compare cigar prices, check EU landed import costs and join live virtual cigar lounges.</p>
+        <span class="kicker">Independent Software Studio</span>
+        <h1>Building apps for passionate communities.</h1>
+        <p>
+          Focused software products designed to help people track, connect and work better.
+        </p>
       </section>
 
-      <section id="apps" class="section">
+      <section id="products" class="section">
         <div class="section-head">
-          <span class="kicker">Apps</span>
-          <h2>Two focused apps for cigar smokers.</h2>
-          <p>One helps you buy smarter. One gives you somewhere to enjoy the smoke.</p>
+          <span class="kicker">Products</span>
+          <h2>Three apps. One studio.</h2>
+          <p>
+            Vanta Labs creates simple, focused apps with clear purpose — from cigar discovery and live lounges to frontline workforce tools.
+          </p>
         </div>
 
-        <div class="apps-grid">
-          <article class="app-card">
-            <img class="app-icon" src="cl.png" alt="Cigar Ledger app icon" loading="lazy" />
-            <h3>Cigar Ledger</h3>
-            <p>UK cigar price comparison and EU import savings.</p>
-            <a class="play-link" href="https://play.google.com/store/apps/details?id=com.aaronsapps.cigarledger" target="_blank" rel="noopener">View on Google Play</a>
+        <div class="products">
+          <article class="product">
+            <div class="product-top">
+              <img class="app-icon" src="cl.png" alt="Cigar Ledger app icon" />
+              <div>
+                <div class="tag">Cigar Discovery</div>
+                <h3>Cigar Ledger</h3>
+                <p>Track cigars, compare prices and build a better picture of what belongs in your humidor.</p>
+              </div>
+            </div>
+            <div class="links">
+              <a class="button" href="https://play.google.com/store/apps/details?id=com.aaronsapps.cigarledger" target="_blank" rel="noopener">Google Play</a>
+            </div>
           </article>
 
-          <article class="app-card">
-            <img class="app-icon" src="hs.png" alt="Herf Station app icon" loading="lazy" />
-            <h3>Herf Station</h3>
-            <p>Live virtual cigar lounges for cigar smokers.</p>
-            <a class="play-link" href="https://play.google.com/store/apps/details?id=com.vantalabs.herf_station" target="_blank" rel="noopener">View on Google Play</a>
-            <a class="play-link" href="https://apps.apple.com/app/herf-station-cigar-lounge/id6771880305" target="_blank" rel="noopener">View on the App Store</a>
+          <article class="product">
+            <div class="product-top">
+              <img class="app-icon" src="hs.png" alt="Herf Station app icon" />
+              <div>
+                <div class="tag">Cigar Community</div>
+                <h3>Herf Station</h3>
+                <p>Live virtual cigar lounges for smokers who want somewhere focused to connect, chat and enjoy the smoke.</p>
+              </div>
+            </div>
+            <div class="links">
+              <a class="button" href="https://play.google.com/store/apps/details?id=com.vantalabs.herf_station" target="_blank" rel="noopener">Google Play</a>
+              <a class="button" href="https://apps.apple.com/app/herf-station-cigar-lounge/id6771880305" target="_blank" rel="noopener">App Store</a>
+            </div>
           </article>
-        </div>
-      </section>
 
-      <section id="cigar-ledger" class="section">
-        <div class="section-head">
-          <span class="kicker">Cigar Prices UK</span>
-          <h2>Find the best buying route before you order.</h2>
-          <p>Cigar Ledger helps UK cigar smokers compare cigar prices across trusted retailers, check estimated EU landed import costs and spot better value before buying singles or boxes.</p>
-        </div>
-
-        <div class="simple-grid">
-          <div class="simple-item">
-            <h3>UK retailer prices</h3>
-            <p>Compare prices across trusted cigar retailers without checking every shop manually.</p>
-          </div>
-
-          <div class="simple-item">
-            <h3>Box savings</h3>
-            <p>See where larger purchases may offer better value per cigar.</p>
-          </div>
-
-          <div class="simple-item">
-            <h3>EU landed cost</h3>
-            <p>Estimate whether importing cigars from Europe may beat the UK price after duty and VAT.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="herf-station" class="section">
-        <div class="section-head">
-          <span class="kicker">Virtual Cigar Lounge</span>
-          <h2>Already got your cigars? Smoke them with others.</h2>
-          <p>Herf Station gives cigar smokers a live virtual lounge — a focused place to host or join online cigar sessions without the noise of a generic social feed.</p>
-        </div>
-
-        <div class="simple-grid">
-          <div class="simple-item">
-            <h3>Virtual herf</h3>
-            <p>Join online cigar sessions without needing a local cigar lounge nearby.</p>
-          </div>
-
-          <div class="simple-item">
-            <h3>Live lounges</h3>
-            <p>Host or join live cigar lounges from your phone.</p>
-          </div>
-
-          <div class="simple-item">
-            <h3>Focused community</h3>
-            <p>A simple place for cigar smokers to relax, chat and enjoy the smoke.</p>
-          </div>
+          <article class="product">
+            <div class="product-top">
+              <img class="app-icon" src="vs.png" alt="Vanta Shift app icon" />
+              <div>
+                <div class="tag">Workforce Management</div>
+                <h3>Vanta Shift</h3>
+                <p>Shift Planner - Rota & Hours helps teams plan rotas, track hours and keep schedules clear.</p>
+              </div>
+            </div>
+            <div class="links">
+              <a class="button" href="https://play.google.com/store/apps/details?id=com.vantashift.app" target="_blank" rel="noopener">Google Play</a>
+              <a class="button" href="https://apps.apple.com/app/shift-planner-rota-hours/id6771880899" target="_blank" rel="noopener">App Store</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -513,109 +420,41 @@
         <div class="about">
           <div>
             <span class="kicker">About</span>
-            <h2>Small apps. Clear purpose.</h2>
-            <p>Vanta Labs is an independent app studio based in Manchester, UK. We build focused cigar apps that avoid clutter and do one job properly — from helping smokers compare UK cigar prices and import savings, to giving them a live lounge to enjoy cigars with others.</p>
+            <h2>Built small. Built focused.</h2>
           </div>
 
-          <div class="contact">
-            <span class="kicker">Contact</span>
-            <a href="mailto:support@vantalabs.co.uk">support@vantalabs.co.uk</a>
-            <div>Manchester, United Kingdom</div>
+          <div class="statement">
+            <strong>Vanta Labs is an independent software studio based in Manchester, UK.</strong>
+            <p>
+              We build products for real communities, with a focus on simplicity, usefulness and long-term value. No bloated platforms. No noise. Just focused apps that do the job properly.
+            </p>
           </div>
         </div>
       </section>
 
-<section class="section">
-  <div class="section-head">
-    <span class="kicker">Cigar Guides</span>
+      <section id="contact" class="section">
+        <div class="section-head">
+          <span class="kicker">Contact</span>
+          <h2>Let’s build what’s next.</h2>
+          <p>
+            For support, product questions or partnerships, contact Vanta Labs directly.
+          </p>
+        </div>
 
-    <h2>Looking for cheaper cigars in the UK?</h2>
-
-    <p>
-      Compare cigar prices, estimate EU landed costs and discover better buying routes with our cheap cigars UK guide.
-    </p>
-
-    <a
-      class="play-link"
-      href="/cheap-cigars-uk.html"
-    >
-      Read the guide
-    </a>
-
-    <div class="seo-links" style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px;">
-
-      <a style="font-size:12px;padding:7px 12px;" class="play-link" href="cheap-cigars-uk.html">
-        Cheap Cigars UK
-      </a>
-
-      <a style="font-size:12px;padding:7px 12px;" class="play-link" href="cigar-price-comparison.html">
-        Cigar Price Comparison
-      </a>
-
-      <a style="font-size:12px;padding:7px 12px;" class="play-link" href="best-cigar-app.html">
-        Best Cigar App
-      </a>
-
-      <a style="font-size:12px;padding:7px 12px;" class="play-link" href="uk-cigar-prices.html">
-        UK Cigar Prices
-      </a>
-
-    </div>
-  </div>
-</section>
-      
-    
-
-<section class="section" id="price-guides">
-  <div class="section-head">
-    <span class="kicker">Cigar price guides</span>
-    <h2>Find better value before you buy.</h2>
-    <p>
-      Quick guides for UK cigar prices, budget cigars, Cuban cigar searches and popular premium brands.
-    </p>
-  </div>
-
-  <div class="guide-groups">
-    <div class="guide-panel">
-      <h3>Value guides</h3>
-      <a href="/cheap-cigars.html">Cheap Cigars</a>
-      <a href="/cheap-cigars-uk.html">Cheap Cigars UK</a>
-      <a href="/budget-cigars-uk.html">Budget Cigars UK</a>
-      <a href="/best-cigars-under-10.html">Best Cigars Under £10</a>
-      <a href="/best-cigars-under-15.html">Best Cigars Under £15</a>
-      <a href="/best-cigars-under-20.html">Best Cigars Under £20</a>
-    </div>
-
-    <div class="guide-panel">
-      <h3>Cuban cigars</h3>
-      <a href="/cuban-cigar-prices.html">Cuban Cigar Prices UK</a>
-      <a href="/cheap-cuban-cigars-uk.html">Cheap Cuban Cigars UK</a>
-      <a href="/cohiba-prices-uk.html">Cohiba Prices UK</a>
-      <a href="/montecristo-prices-uk.html">Montecristo Prices UK</a>
-      <a href="/partagas-prices-uk.html">Partagas Prices UK</a>
-    </div>
-
-    <div class="guide-panel">
-      <h3>Premium brands</h3>
-      <a href="/davidoff-prices-uk.html">Davidoff Prices UK</a>
-      <a href="/cigar-price-comparison.html">Cigar Price Comparison</a>
-      <a href="/uk-cigar-prices.html">UK Cigar Prices</a>
-      <a href="/best-cigar-app.html">Best Cigar App</a>
-    </div>
-  </div>
-</section>
-
-
-</main>
+        <div class="contact">
+          <a href="mailto:support@vantalabs.co.uk">support@vantalabs.co.uk</a>
+          <div>Manchester, United Kingdom</div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-  <div>
-    <strong>Vanta Labs</strong><br />
-    Premium cigar apps from Manchester, UK.<br />
-    Independent cigar price comparison tools. Not affiliated with Habanos S.A. or listed retailers. 18+ only.
-  </div>
-  <div>© 2026 Vanta Labs</div>
-</footer>
+      <div>
+        <strong>Vanta Labs</strong><br />
+        Independent software studio from Manchester, UK.
+      </div>
+      <div>© 2026 Vanta Labs</div>
+    </footer>
   </div>
 </body>
 </html>

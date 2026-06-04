@@ -307,8 +307,11 @@
       }
 
       .hero {
-        min-height: auto;
-        padding: 90px 0 76px;
+        min-height: calc(100vh - 72px);
+        padding: 110px 0 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .kicker {
@@ -318,15 +321,16 @@
       }
 
       h1 {
-        font-size: 38px;
+        font-size: 43px;
         line-height: 1.02;
-        letter-spacing: -0.055em;
+        letter-spacing: -0.06em;
       }
 
       .hero p {
-        margin-top: 26px;
-        font-size: 17px;
-        line-height: 1.65;
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 96%;
       }
 
       .section {

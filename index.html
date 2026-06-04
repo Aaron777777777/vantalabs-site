@@ -449,6 +449,60 @@
       }
     }
   </style>
+
+<style id="cigar-ledger-contact-style">
+#contact .contactForm {
+  max-width: 760px !important;
+  margin-top: 36px !important;
+  display: grid !important;
+  gap: 20px !important;
+}
+
+#contact .contactFormGrid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+#contact .contactForm label {
+  display: grid !important;
+  gap: 10px !important;
+  width: 100% !important;
+  color: #f4efe6 !important;
+  font-weight: 700 !important;
+}
+
+#contact .contactForm input,
+#contact .contactForm textarea {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 16px 18px !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.025) !important;
+  color: #f4efe6 !important;
+  font: inherit !important;
+}
+
+#contact .contactForm textarea {
+  min-height: 205px !important;
+  resize: vertical !important;
+}
+
+#contact .contactForm button {
+  width: fit-content !important;
+  cursor: pointer !important;
+}
+
+@media (max-width: 700px) {
+  #contact .contactFormGrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -549,20 +603,46 @@
         </div>
       </section>
 
-      <section id="contact" class="section">
-        <div class="section-head">
-          <span class="kicker">Contact</span>
-          <h2>Let’s build what’s next.</h2>
-          <p>
-            For support, product questions or partnerships, contact Vanta Labs directly.
-          </p>
-        </div>
+      
 
-        <div class="contact">
-          <a href="mailto:support@vantalabs.co.uk">support@vantalabs.co.uk</a>
-          <div>Manchester, United Kingdom</div>
-        </div>
-      </section>
+<section id="contact" class="section homeSection">
+  <div class="section-head">
+    <span class="kicker">Contact</span>
+    <h2>Questions or support?</h2>
+    <p>Send a message to Vanta Labs.</p>
+  </div>
+
+  <form
+    class="contactForm"
+    action="https://formsubmit.co/support@vantalabs.co.uk"
+    method="post"
+  >
+    <div class="contactFormGrid">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+    </div>
+
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <input type="hidden" name="_subject" value="New Vanta Labs website message">
+    <input type="hidden" name="_url" value="https://www.vantalabs.co.uk/">
+    <input type="hidden" name="_next" value="https://www.vantalabs.co.uk/?message=sent">
+
+    <button class="button" type="submit">Send Message</button>
+  </form>
+</section>
+
+
     </main>
 
     <footer>

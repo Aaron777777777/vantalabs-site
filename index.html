@@ -568,6 +568,124 @@
 }
 </style>
 
+
+<style id="vanta-final-polish">
+/* VANTA FINAL FOOTER + CONTACT POLISH */
+
+#contact .contactForm {
+  max-width: 760px !important;
+  margin-top: 36px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+
+#contact .contactFormGrid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+#contact .contactForm label {
+  display: grid !important;
+  gap: 10px !important;
+  width: 100% !important;
+  color: #f4efe6 !important;
+  font-weight: 700 !important;
+}
+
+#contact .contactForm input:not([type="hidden"]) {
+  width: 100% !important;
+  height: 58px !important;
+  min-height: 0 !important;
+  box-sizing: border-box !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.025) !important;
+  color: #f4efe6 !important;
+  font: inherit !important;
+}
+
+#contact .contactForm textarea {
+  width: 100% !important;
+  height: 180px !important;
+  min-height: 180px !important;
+  box-sizing: border-box !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.025) !important;
+  color: #f4efe6 !important;
+  font: inherit !important;
+  resize: vertical !important;
+}
+
+#contact .contactForm button {
+  width: fit-content !important;
+  cursor: pointer !important;
+}
+
+.siteFooter {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr auto;
+  gap: 28px;
+  align-items: start;
+  color: rgba(255,255,255,0.52);
+}
+
+.siteFooter strong {
+  color: rgba(255,255,255,0.72);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+.footerLinks a {
+  color: rgba(255,255,255,0.58);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footerLinks a:hover {
+  color: #c9a646;
+}
+
+@media (max-width: 800px) {
+  .siteFooter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  #contact .contactFormGrid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  #contact .contactForm {
+    gap: 18px !important;
+  }
+
+  #contact .contactForm input:not([type="hidden"]) {
+    height: 56px !important;
+  }
+
+  #contact .contactForm textarea {
+    height: 170px !important;
+    min-height: 170px !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -710,13 +828,23 @@
 
     </main>
 
-    <footer>
-      <div>
-        <strong>Vanta Labs</strong><br />
-        Independent software studio from Manchester, UK.
-      </div>
-      <div>© 2026 Vanta Labs</div>
-    </footer>
+    
+<footer class="siteFooter">
+  <div>
+    <strong>Vanta Labs</strong><br>
+    Independent software studio from Manchester, UK.
+  </div>
+
+  <div class="footerLinks">
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.cigarledger.co.uk" target="_blank" rel="noopener">Cigar Ledger</a>
+  </div>
+
+  <div>© 2026 Vanta Labs</div>
+</footer>
+
   </div>
 </body>
 </html>

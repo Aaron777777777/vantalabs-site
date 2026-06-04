@@ -288,49 +288,112 @@
     }
 
     @media (max-width: 560px) {
-      .page { width: min(100% - 32px, var(--max)); }
+      .page { width: min(100% - 28px, var(--max)); }
 
       header {
         height: auto;
-        padding: 24px 0;
-        align-items: flex-start;
-        gap: 18px;
+        padding: 22px 0 18px;
+        align-items: center;
+      }
+
+      .brand {
+        font-size: 11px;
+        letter-spacing: 0.22em;
       }
 
       nav {
-        gap: 16px;
-        font-size: 13px;
+        gap: 12px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 520px;
-        padding: 30px 0 70px;
+        min-height: auto;
+        padding: 90px 0 76px;
+      }
+
+      .kicker {
+        margin-bottom: 18px;
+        font-size: 10px;
+        letter-spacing: 0.22em;
       }
 
       h1 {
-        font-size: 42px;
-        line-height: 1.04;
+        font-size: 38px;
+        line-height: 1.02;
+        letter-spacing: -0.055em;
       }
 
-      .hero p,
+      .hero p {
+        margin-top: 26px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .section-head {
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        font-size: 36px;
+        line-height: 1.02;
+      }
+
       .section-head p,
       .about p,
       .contact {
         font-size: 16px;
+        line-height: 1.65;
       }
 
-      .section { padding: 78px 0; }
-
-      h2 { font-size: 38px; }
+      .products {
+        gap: 18px;
+      }
 
       .product {
-        min-height: 310px;
+        min-height: auto;
         padding: 24px;
         border-radius: 24px;
       }
 
+      .product-top {
+        gap: 20px;
+      }
+
+      .app-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+      }
+
       .product h3 {
         font-size: 30px;
+      }
+
+      .product p {
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .links {
+        margin-top: 24px;
+      }
+
+      .button {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+
+      .about {
+        gap: 32px;
+      }
+
+      .statement strong {
+        font-size: 22px;
+        line-height: 1.35;
       }
 
       footer {

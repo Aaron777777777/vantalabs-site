@@ -539,6 +539,7 @@
   }
 
   #contact .contactForm button {
+  margin-top: 10px !important;
     min-height: 46px !important;
     padding: 11px 20px !important;
     margin-top: 4px !important;
@@ -589,6 +590,7 @@
 }
 
 #contact .contactForm button {
+  margin-top: 10px !important;
   width: fit-content !important;
   cursor: pointer !important;
 }
@@ -667,7 +669,7 @@
 #contact .contactForm textarea {
   width: 100% !important;
   height: 180px !important;
-  min-height: 180px !important;
+  min-height: 150px !important;
   padding: 14px 16px !important;
   box-sizing: border-box !important;
   resize: vertical !important;
@@ -778,7 +780,7 @@
 #contact .contactForm textarea {
   width: 100% !important;
   height: 180px !important;
-  min-height: 180px !important;
+  min-height: 150px !important;
   box-sizing: border-box !important;
   padding: 14px 16px !important;
   border: 1px solid rgba(255,255,255,0.18) !important;
@@ -790,6 +792,7 @@
 }
 
 #contact .contactForm button {
+  margin-top: 10px !important;
   width: fit-content !important;
   cursor: pointer !important;
 }
@@ -889,14 +892,22 @@
 </style>
 
 
+
+
+
 <style id="vanta-contact-focus-polish">
 #contact .contactForm input:focus,
-#contact .contactForm textarea:focus {
-  border-color: #c9a646 !important;
-  box-shadow: 0 0 0 3px rgba(201,166,70,.12) !important;
+#contact .contactForm textarea:focus,
+#contact .contactForm input:focus-visible,
+#contact .contactForm textarea:focus-visible {
   outline: none !important;
+  border-color: rgba(201,166,70,.35) !important;
+  box-shadow: 0 0 0 2px rgba(201,166,70,.035) !important;
 }
 </style>
+
+
+
 
 </head>
 

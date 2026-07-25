@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.removeAttribute("aria-disabled");
       element.textContent =
         element.dataset.store === "ios"
-          ? "Download on the App Store"
+          ? "App Store"
           : "Google Play";
     } else {
       element.removeAttribute("href");

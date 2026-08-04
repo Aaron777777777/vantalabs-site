@@ -19,7 +19,7 @@
 <meta content="Guardian helps parents stay connected with private child location sharing, Home and School alerts, location history, battery status and SOS tools." property="og:description"/>
 <meta content="https://www.vantalabs.co.uk/guardian/" property="og:url"/>
 <meta content="https://www.vantalabs.co.uk/guardian.png" property="og:image"/>
-<link href="/guardian/assets/guardian.css" rel="stylesheet"/>
+<link href="/guardian/assets/guardian.css?v=guardian-parent-quest-final-20260804" rel="stylesheet"/>
 <script defer="" src="/guardian/assets/app-links.js"></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -135,127 +135,141 @@
     margin-bottom: 26px;
   }
 }
-</style></head>
-<body class="guardian-home-compact">
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who can see a child’s location?","acceptedAnswer":{"@type":"Answer","text":"Only trusted adults with access to the private Guardian family can see the available family location information."}},{"@type":"Question","name":"Is parent location sharing required?","acceptedAnswer":{"@type":"Answer","text":"No. Adult location sharing remains optional."}},{"@type":"Question","name":"Can location or alerts ever be delayed?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS, buildings, signal, permissions, battery restrictions and device conditions can affect what Guardian receives."}}]}</script>
+</head>
+<body class="parent-quest-home parent-quest-detail">
 <header class="head">
 <nav>
 <a class="brand" href="/">Vanta Labs</a>
+
 <div class="links">
-<a href="#routine">Routine</a>
-<a href="#features">Features</a>
-<a href="#privacy">Privacy</a>
+<a href="/guardian/">Guardian</a>
+<a href="/guardian/features/">Features</a>
+<a href="/guardian/safe-zone-alerts/">Safe zones</a>
 <a href="/guardian/guides/what-is-a-family-safety-app/">Guides</a>
 </div>
 </nav>
 </header>
+
 <main>
-<section class="hero">
-<div class="hero-visual">
-<img alt="Guardian family tracker app icon" class="hero-icon" src="/guardian.png"/>
-</div>
-<div class="hero-content">
+<div class="hero">
+<div>
 <span class="eyebrow">Guardian · Family Tracker</span>
-<h1>Know they got there.<br/>Without checking every five minutes.</h1>
-<p class="lead">Get a useful update when they leave Home, arrive at School or make it back safely. Guardian keeps private location sharing, device status and SOS close when the family needs them.</p>
-<div class="ctas">
 
+<h1>Private family location, Home and School alerts and SOS</h1>
 
-<a class="btn" data-store="android" href="https://play.google.com/store/apps/details?id=com.vantalabs.guardian&amp;pcampaignid=web_share" rel="noopener" target="_blank">Google Play</a><a aria-disabled="true" class="btn disabled" data-store="ios">App Store — coming soon</a></div>
-<p class="hero-note">Built by <a href="/">Vanta Labs</a>.</p>
-</div>
-</section>
-<section class="section" id="routine">
-<div class="section-head">
-<span class="kicker">The everyday routine</span>
-<h2>Four updates that matter.</h2>
-<p>Most parents do not want to watch a map all day. Guardian focuses on the four everyday updates that usually matter most.</p>
-</div>
-<div class="timeline">
-<article class="moment"><span class="moment-num">01</span><h3>Leaves Home</h3><p>The morning journey has started.</p></article>
-<article class="moment"><span class="moment-num">02</span><h3>Arrives at School</h3><p>Know the school journey is complete.</p></article>
-<article class="moment"><span class="moment-num">03</span><h3>Leaves School</h3><p>The journey home has begun.</p></article>
-<article class="moment"><span class="moment-num">04</span><h3>Arrives Home</h3><p>They made it back safely.</p></article>
-</div>
-</section>
-<section class="section" id="features">
-<div class="section-head">
-<span class="kicker">Guardian features</span>
-<h2>The useful bits, all in one place.</h2>
-</div>
-<div class="feature-list">
-<article class="feature"><span class="label">Location</span><h3>Private Family Map</h3><p>Open the private Family Map when you need more context, and see the latest available location shared by connected family devices.</p></article>
-<article class="feature"><span class="label">Safety</span><h3>Safe zones and SOS</h3><p>Receive Home and School alerts during ordinary journeys, with an SOS option available on the connected child device when something is wrong.</p></article>
-<article class="feature"><span class="label">Status</span><h3>Location history and device status</h3><p>Check recent location records, the child phone's battery level and when Guardian last received an update from the device.</p></article>
-</div>
-<div class="privacy" id="privacy">
-<div class="privacy-copy-left">
-<h2>Private by design.</h2>
-<p>Guardian keeps location sharing inside a private, parent-managed family. There are no public profiles, adverts or social feeds.</p>
-</div>
-<div class="privacy-points">
-<div class="checks">
-<div class="check"><b>✓</b><span>No public profiles or follower system</span></div>
-<div class="check"><b>✓</b><span>No advertising or third-party ad tracking</span></div>
-<div class="check"><b>✓</b><span>Owner controls for family management</span></div>
-<div class="check"><b>✓</b><span>Optional parent location sharing</span></div>
-</div>
+<p class="lead">
+Get a useful update when they leave Home, arrive at School or make it back
+safely. Guardian keeps private family location sharing, device status and SOS
+close when your family needs them.
+</p>
+
 <div class="ctas">
-<a class="btn" href="/guardian/privacy-and-location-sharing/">Read about privacy</a>
-<a class="btn" href="/privacy.html">Vanta Labs Privacy Policy</a>
+<a class="btn" data-store="android">Google Play</a>
+<a class="btn disabled" data-store="ios"
+aria-disabled="true">App Store — coming soon</a>
 </div>
 </div>
-</div></section>
-<section class="faq-mini">
-<div class="faq-mini-head">
-<h2>Common questions</h2>
-<p>Clear answers about location sharing, School alerts and family privacy.</p>
+
+<div class="iconbox">
+<img
+  alt="Guardian family tracker app icon"
+  height="512"
+  src="/guardian.png"
+  width="512"
+/>
 </div>
-<details>
-<summary>How does Guardian track a child’s location?</summary>
-<p>A parent creates the child profile and links the child’s phone to the private family. Guardian then shows the latest available location provided by that connected device, subject to location permissions, signal, battery settings and operating-system restrictions.</p>
-</details>
-<details>
-<summary>Can Guardian alert me when my child arrives at School?</summary>
-<p>Yes. A parent can create a School safe zone and receive an arrival notification when Guardian confirms that the connected child device has entered the area.</p>
-</details>
-<details>
-<summary>Does Guardian share family location publicly?</summary>
-<p>No. Guardian does not use public profiles, follower systems or public location sharing. Family information stays inside the connected, parent-managed family account.</p>
-</details>
+</div>
+
+<article class="body">
+<section class="long-copy">
+<h2>The four updates that matter during an ordinary school day</h2>
+
+<div class="long-copy-text">
+<p>
+Guardian can let trusted adults know when a connected child leaves Home,
+arrives at School, leaves School and returns Home. Open the private Family Map
+when you need more context instead of watching a public or social location feed.
+</p>
+
+<p>
+Recent location history, battery level and last-update time help explain what
+the child device is reporting. An SOS option is available when something is
+wrong, while adult location sharing remains optional.
+</p>
+</div>
 </section>
+
+<div class="notice">
+<strong>Guardian is not an emergency service.</strong>
+Location and notifications can be affected by GPS, connectivity, permissions,
+battery settings and operating-system restrictions. In immediate danger,
+contact the emergency services directly.
+</div>
+
+<div class="parent-quest-lower-grid">
 <section class="related">
-<div class="related-head">
-<h2>Explore Guardian</h2>
-<p class="related-intro">Useful guides and feature pages for parents who want to understand how Guardian works before downloading it.</p>
-</div>
-<div class="explore-grid">
-<a class="explore-link" href="/guardian/safe-zone-alerts/">
-<div class="explore-top"><small>Safe zones</small><span class="explore-arrow">→</span></div>
-<strong>Home and School alerts</strong>
-<p>See how Guardian recognises useful arrivals and departures around everyday family routines.</p>
+<h2>The useful parts, together</h2>
+
+<div class="grid">
+<a class="card" href="/guardian/safe-zone-alerts/">
+<small>Safe zones</small>
+<strong>Home and School arrival and departure alerts</strong>
 </a>
-<a class="explore-link" href="/guardian/child-location-tracker/">
-<div class="explore-top"><small>Location</small><span class="explore-arrow">→</span></div>
-<strong>Child location sharing</strong>
-<p>Understand how connected child devices share their latest available location with the private family.</p>
+
+<a class="card" href="/guardian/family-map-app/">
+<small>Family Map</small>
+<strong>See the latest available private family location</strong>
 </a>
-<a class="explore-link" href="/guardian/sos-alert-app-for-families/">
-<div class="explore-top"><small>Urgent alerts</small><span class="explore-arrow">→</span></div>
-<strong>Family SOS tools</strong>
-<p>Learn what happens when a connected child device sends an urgent alert to trusted adults.</p>
+
+<a class="card" href="/guardian/location-history-for-families/">
+<small>History</small>
+<strong>Review recent location and device context</strong>
 </a>
-<a class="explore-link" href="/guardian/guides/location-sharing-and-family-privacy/">
-<div class="explore-top"><small>Parent guide</small><span class="explore-arrow">→</span></div>
-<strong>Location sharing and privacy</strong>
-<p>A practical guide to transparent, proportionate family location sharing and trusted access.</p>
+
+<a class="card" href="/guardian/sos-alert-app-for-families/">
+<small>SOS</small>
+<strong>Keep an urgent family alert option close</strong>
 </a>
 </div>
-<a class="all-guides" href="/guardian/guides/what-is-a-family-safety-app/">View all Guardian guides <span>→</span></a>
 </section>
+
+<section class="faq">
+<h2>Quick questions</h2>
+
+<details>
+<summary>Who can see a child’s location?</summary>
+<p>
+Only trusted adults with access to the private Guardian family can see the
+available family location information.
+</p>
+</details>
+
+<details>
+<summary>Is parent location sharing required?</summary>
+<p>No. Adult location sharing remains optional.</p>
+</details>
+
+<details>
+<summary>Can location or alerts ever be delayed?</summary>
+<p>
+Yes. GPS, buildings, signal, permissions, battery restrictions and device
+conditions can affect what Guardian receives.
+</p>
+</details>
+</section>
+</div>
+</article>
 </main>
+
 <footer>
 <span>© 2026 Vanta Labs NW LTD · Manchester, UK</span>
-<span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/">All Vanta Labs apps</a></span>
+<span>
+<a href="/privacy.html">Privacy</a> ·
+<a href="/terms.html">Terms</a> ·
+<a href="/">All Vanta Labs apps</a>
+</span>
 </footer>
 </body>
 </html>

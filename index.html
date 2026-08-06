@@ -10,8 +10,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vanta Labs | Independent Software Studio</title>
-  <meta name="description" content="Vanta Labs is an independent software studio building focused apps for passionate communities." />
+  <title>Vanta Labs | Apps for Families, Shift Workers and Workplaces</title>
+  <meta name="description" content="Vanta Labs builds Guardian, Vanta Shift, Parent Quest and Vanta Workforce — focused apps for families, shift workers and workplaces." />
   <meta name="author" content="Vanta Labs" />
   <meta name="robots" content="index, follow" />
 
@@ -923,6 +923,63 @@ img[src^="vanta-workforce.png"] {
 
 
 
+
+  <script id="vanta-brand-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vantalabs.co.uk/#organization",
+      "name": "Vanta Labs",
+      "legalName": "VANTA LABS NW LTD",
+      "url": "https://vantalabs.co.uk/",
+      "email": "support@vantalabs.co.uk"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vantalabs.co.uk/#website",
+      "url": "https://vantalabs.co.uk/",
+      "name": "Vanta Labs",
+      "publisher": {
+        "@id": "https://vantalabs.co.uk/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://vantalabs.co.uk/#featured-apps",
+      "name": "Featured Vanta Labs apps",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vanta Shift",
+          "url": "https://vantalabs.co.uk/vanta-shift/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guardian",
+          "url": "https://vantalabs.co.uk/guardian/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Parent Quest",
+          "url": "https://vantalabs.co.uk/parent-quest/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Vanta Workforce",
+          "url": "https://vantalabs.co.uk/workforce/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
@@ -994,9 +1051,9 @@ img[src^="vanta-workforce.png"] {
             <div class="product-top">
               <img class="app-icon" src="vanta-shift.png?v=1" alt="Vanta Shift app icon" />
               <div>
-                <div class="tag">Workforce Management</div>
-                <h3>Vanta Shift</h3>
-                <p>Shift Planner - Rota & Hours helps teams plan rotas, track hours and keep schedules clear.</p>
+                <div class="tag">Personal Shift Planner</div>
+                <h3><a href="/vanta-shift/" style="color:inherit;text-decoration:none">Vanta Shift</a></h3>
+                <p>Plan shifts and rotas, track hours and estimate earnings in one simple personal shift planner.</p>
               </div>
             </div>
             <div class="links">
@@ -1025,7 +1082,7 @@ img[src^="vanta-workforce.png"] {
               <img class="app-icon" src="parentquest.png?v=2" alt="Parent Quest app icon" />
               <div>
                 <div class="tag">Family Routines</div>
-                <h3>Parent Quest</h3>
+                <h3><a href="/parent-quest/" style="color:inherit;text-decoration:none">Parent Quest</a></h3>
                 <p>Turn chores into routines with checklists, rewards and simple family organisation.</p>
               </div>
             </div>
@@ -1040,7 +1097,7 @@ img[src^="vanta-workforce.png"] {
               <img class="app-icon" src="vanta-workforce.png?v=3" alt="Vanta Workforce app icon" />
               <div>
                 <div class="tag">WORKFORCE MANAGEMENT</div>
-                <h3>Vanta Workforce</h3>
+                <h3><a href="/workforce/" style="color:inherit;text-decoration:none">Vanta Workforce</a></h3>
                 <p>Workforce management tools for simpler scheduling, attendance and team operations.</p>
               </div>
             </div>

@@ -1,7 +1,7 @@
 (() => {
   const stores = {
     android: "https://play.google.com/store/apps/details?id=com.vantalabs.vantaworkforce",
-    ios: "https://apps.apple.com/app/vanta-workforce/id6796074885"
+    ios: "https://apps.apple.com/gb/app/vanta-workforce/id6796074885"
   };
 
   document.querySelectorAll("[data-store]").forEach((element) => {

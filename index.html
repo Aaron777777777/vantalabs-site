@@ -1029,8 +1029,14 @@ img[src^="vanta-workforce.png"] {
 
   /* Move homepage hero slightly higher on phones only */
   .hero {
-    min-height: calc(100vh - 152px) !important;
-    transform: translateY(-52px) !important;
+    min-height: calc(100vh - 72px) !important;
+    transform: none !important;
+  }
+
+  /* Keep the hero copy in its approved visual position
+     while allowing the divider to sit below the initial viewport */
+  .hero > * {
+    transform: translateY(-92px);
   }
 
   /* Give the major homepage sections more breathing room */

@@ -107,7 +107,7 @@
       min-height: calc(100vh - 86px);
       display: grid;
       align-content: start;
-      padding: 96px 0 120px;
+      padding: 145px 0 140px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -138,13 +138,13 @@
     }
 
     .section {
-      padding: 110px 0;
+      padding: 145px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .section-head {
       max-width: 760px;
-      margin-bottom: 62px;
+      margin-bottom: 72px;
     }
 
     h2 {
@@ -360,7 +360,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        transform: translateY(-36px);
+        transform: translateY(14px);
       }
 
       .kicker {
@@ -383,11 +383,11 @@
       }
 
       .section {
-        padding: 64px 0;
+        padding: 84px 0;
       }
 
       .section-head {
-        margin-bottom: 34px;
+        margin-bottom: 42px;
       }
 
       h2 {
@@ -842,6 +842,22 @@ img[src^="vanta-workforce.png"] {
   color: #c9a646;
 }
 
+/* Homepage footer link breathing room */
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 42px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .footerLinks {
+    gap: 26px !important;
+  }
+}
+
+
 @media (max-width: 800px) {
   .siteFooter {
     grid-template-columns: 1fr;
@@ -979,6 +995,7 @@ img[src^="vanta-workforce.png"] {
   ]
 }
   </script>
+
 </head>
 
 <body>
@@ -986,12 +1003,14 @@ img[src^="vanta-workforce.png"] {
     <header>
       <a href="#top" class="brand">Vanta Labs</a>
       <nav>
+        <a href="#top">Home</a>
         <a href="#products">Products</a>
         <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button class="menu-button" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
       <div class="mobile-menu">
+        <a href="#top" onclick="document.body.classList.remove('menu-open')">Home</a>
         <a href="#products" onclick="document.body.classList.remove('menu-open')">Products</a>
         <a href="#about" onclick="document.body.classList.remove('menu-open')">About</a>
         <a href="#contact" onclick="document.body.classList.remove('menu-open')">Contact</a>
@@ -1128,8 +1147,6 @@ img[src^="vanta-workforce.png"] {
           </div>
         </div>
       </section>
-
-      
 
 <section id="contact" class="section homeSection">
   <div class="section-head">

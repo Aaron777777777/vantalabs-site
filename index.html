@@ -1001,20 +1001,46 @@ img[src^="vanta-workforce.png"] {
 
 @media (max-width: 560px) {
 
+  /* Keep the mobile navigation above the page and reliably tappable */
+  header {
+    position: relative !important;
+    z-index: 1000 !important;
+  }
+
+  .menu-button {
+    position: relative !important;
+    z-index: 1002 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+
+  .mobile-menu {
+    position: fixed !important;
+    top: 78px !important;
+    right: 18px !important;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+  }
+
+  body.menu-open .mobile-menu {
+    display: grid !important;
+    gap: 14px !important;
+  }
+
   /* Move homepage hero slightly higher on phones only */
   .hero {
-    transform: translateY(-62px) !important;
+    transform: translateY(-52px) !important;
   }
 
   /* Give the major homepage sections more breathing room */
   .section {
-    padding-top: 112px !important;
-    padding-bottom: 112px !important;
+    padding-top: 104px !important;
+    padding-bottom: 104px !important;
   }
 
   /* Keep Contact spacious as a section, but make the form itself compact */
   #contact.section {
-    padding-top: 112px !important;
+    padding-top: 104px !important;
     padding-bottom: 150px !important;
   }
 
@@ -1071,8 +1097,15 @@ img[src^="vanta-workforce.png"] {
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="menu-button" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-      <div class="mobile-menu">
+      <button
+        type="button"
+        class="menu-button"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="document.body.classList.toggle('menu-open'); this.setAttribute('aria-expanded', document.body.classList.contains('menu-open') ? 'true' : 'false');"
+      >☰</button>
+      <div class="mobile-menu" id="mobile-menu">
         <a href="#top" onclick="document.body.classList.remove('menu-open')">Home</a>
         <a href="#products" onclick="document.body.classList.remove('menu-open')">Products</a>
         <a href="#about" onclick="document.body.classList.remove('menu-open')">About</a>

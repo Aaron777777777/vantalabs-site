@@ -40,15 +40,14 @@ FORBIDDEN_PHRASES = (
     "live location",
     "sos alert",
     "emergency alert",
-    "child login",
-    "child account",
+
     "child messaging",
     "family messaging",
     "bank account",
     "banking",
     "cash reward",
     "real money reward",
-    "workforce",
+
     "clocking in",
     "clocking out",
     "booking on",

@@ -1,0 +1,1232 @@
+{
+  "product": "Vanta Workforce",
+  "base_path": "/workforce/",
+  "locale": "en-GB",
+  "status": "local-planning-only",
+  "store_links": {
+    "android": null,
+    "ios": null,
+    "note": "No confirmed Vanta Workforce store URLs found during repository inspection."
+  },
+  "page_count": 115,
+  "clusters": [
+    {
+      "id": "attendance",
+      "name": "Staff attendance",
+      "leader": "/workforce/staff-attendance-app/",
+      "page_count": 12
+    },
+    {
+      "id": "clocking",
+      "name": "Clocking in and out",
+      "leader": "/workforce/employee-clock-in-app/",
+      "page_count": 10
+    },
+    {
+      "id": "gps-attendance",
+      "name": "GPS and location-aware attendance",
+      "leader": "/workforce/gps-clock-in-app/",
+      "page_count": 11
+    },
+    {
+      "id": "timesheets",
+      "name": "Timesheets and working hours",
+      "leader": "/workforce/employee-timesheet-app/",
+      "page_count": 12
+    },
+    {
+      "id": "workplace-presence",
+      "name": "Workplace and site presence",
+      "leader": "/workforce/workplace-presence-app/",
+      "page_count": 8
+    },
+    {
+      "id": "mobile-workforces",
+      "name": "Mobile and field workforces",
+      "leader": "/workforce/field-worker-attendance-app/",
+      "page_count": 9
+    },
+    {
+      "id": "worker-safety",
+      "name": "Worker safety and scheduled checks",
+      "leader": "/workforce/worker-safety-check-app/",
+      "page_count": 11
+    },
+    {
+      "id": "control-centre",
+      "name": "Manager and Control Centre oversight",
+      "leader": "/workforce/control-centre-workforce-app/",
+      "page_count": 9
+    },
+    {
+      "id": "reporting",
+      "name": "Attendance reporting and exports",
+      "leader": "/workforce/attendance-reporting-app/",
+      "page_count": 9
+    },
+    {
+      "id": "operations",
+      "name": "Workplace operations",
+      "leader": "/workforce/workforce-management-app/",
+      "page_count": 9
+    },
+    {
+      "id": "scheduling",
+      "name": "Staff scheduling and rotas",
+      "leader": "/workforce/staff-scheduling-app/",
+      "page_count": 14
+    }
+  ],
+  "pages": [
+    {
+      "path": "/workforce/",
+      "slug": "",
+      "title": "Vanta Workforce | Staff Scheduling, Attendance & Timesheets",
+      "type": "homepage",
+      "cluster": "homepage",
+      "cluster_name": "Vanta Workforce",
+      "cluster_leader": "/workforce/",
+      "intent": "staff scheduling, rotas, attendance, timesheets and workforce management"
+    },
+    {
+      "path": "/workforce/staff-attendance-app/",
+      "slug": "staff-attendance-app",
+      "title": "Vanta Workforce | Staff Attendance App",
+      "type": "cluster_leader",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "staff attendance software"
+    },
+    {
+      "path": "/workforce/employee-attendance-app/",
+      "slug": "employee-attendance-app",
+      "title": "Vanta Workforce | Employee Attendance App",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "employee attendance app"
+    },
+    {
+      "path": "/workforce/workforce-attendance-system/",
+      "slug": "workforce-attendance-system",
+      "title": "Vanta Workforce | Workforce Attendance System",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "workforce attendance system"
+    },
+    {
+      "path": "/workforce/mobile-staff-attendance-app/",
+      "slug": "mobile-staff-attendance-app",
+      "title": "Vanta Workforce | Mobile Staff Attendance App",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "mobile staff attendance"
+    },
+    {
+      "path": "/workforce/digital-attendance-register/",
+      "slug": "digital-attendance-register",
+      "title": "Vanta Workforce | Digital Attendance Register",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "digital attendance register"
+    },
+    {
+      "path": "/workforce/attendance-management-app/",
+      "slug": "attendance-management-app",
+      "title": "Vanta Workforce | Attendance Management App",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "attendance management"
+    },
+    {
+      "path": "/workforce/staff-attendance-tracker/",
+      "slug": "staff-attendance-tracker",
+      "title": "Vanta Workforce | Staff Attendance Tracker",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "staff attendance tracking"
+    },
+    {
+      "path": "/workforce/employee-attendance-records/",
+      "slug": "employee-attendance-records",
+      "title": "Vanta Workforce | Employee Attendance Records",
+      "type": "commercial",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "employee attendance records"
+    },
+    {
+      "path": "/workforce/employee-clock-in-app/",
+      "slug": "employee-clock-in-app",
+      "title": "Vanta Workforce | Employee Clock-In App",
+      "type": "cluster_leader",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "employee clock-in app"
+    },
+    {
+      "path": "/workforce/staff-clock-in-app/",
+      "slug": "staff-clock-in-app",
+      "title": "Vanta Workforce | Staff Clock-In App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "staff clock-in app"
+    },
+    {
+      "path": "/workforce/clock-in-clock-out-app/",
+      "slug": "clock-in-clock-out-app",
+      "title": "Vanta Workforce | Clock-In Clock-Out App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "clock in and out"
+    },
+    {
+      "path": "/workforce/mobile-time-clock-app/",
+      "slug": "mobile-time-clock-app",
+      "title": "Vanta Workforce | Mobile Time Clock App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "mobile time clock"
+    },
+    {
+      "path": "/workforce/digital-clock-in-system/",
+      "slug": "digital-clock-in-system",
+      "title": "Vanta Workforce | Digital Clock-In System",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "digital clock-in"
+    },
+    {
+      "path": "/workforce/workplace-clock-in-app/",
+      "slug": "workplace-clock-in-app",
+      "title": "Vanta Workforce | Workplace Clock-In App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "workplace clock-in"
+    },
+    {
+      "path": "/workforce/worker-booking-on-app/",
+      "slug": "worker-booking-on-app",
+      "title": "Vanta Workforce | Worker Booking-On App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "worker booking on"
+    },
+    {
+      "path": "/workforce/worker-booking-off-app/",
+      "slug": "worker-booking-off-app",
+      "title": "Vanta Workforce | Worker Booking-Off App",
+      "type": "commercial",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "worker booking off"
+    },
+    {
+      "path": "/workforce/gps-clock-in-app/",
+      "slug": "gps-clock-in-app",
+      "title": "Vanta Workforce | GPS Clock-In App",
+      "type": "cluster_leader",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "GPS clock-in app"
+    },
+    {
+      "path": "/workforce/location-based-clock-in/",
+      "slug": "location-based-clock-in",
+      "title": "Vanta Workforce | Location-Based Clock-In",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "location-based clock-in"
+    },
+    {
+      "path": "/workforce/geofenced-time-clock/",
+      "slug": "geofenced-time-clock",
+      "title": "Vanta Workforce | Geofenced Time Clock",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "geofenced time clock"
+    },
+    {
+      "path": "/workforce/worksite-clock-in-app/",
+      "slug": "worksite-clock-in-app",
+      "title": "Vanta Workforce | Worksite Clock-In App",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "worksite clock-in"
+    },
+    {
+      "path": "/workforce/location-aware-attendance-app/",
+      "slug": "location-aware-attendance-app",
+      "title": "Vanta Workforce | Location-Aware Attendance App",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "location-aware attendance"
+    },
+    {
+      "path": "/workforce/gps-attendance-system/",
+      "slug": "gps-attendance-system",
+      "title": "Vanta Workforce | GPS Attendance System",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "GPS attendance system"
+    },
+    {
+      "path": "/workforce/employee-location-clock-in/",
+      "slug": "employee-location-clock-in",
+      "title": "Vanta Workforce | Employee Location Clock-In",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "employee location clock-in"
+    },
+    {
+      "path": "/workforce/site-based-clock-in-system/",
+      "slug": "site-based-clock-in-system",
+      "title": "Vanta Workforce | Site-Based Clock-In System",
+      "type": "commercial",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "site-based clock-in"
+    },
+    {
+      "path": "/workforce/employee-timesheet-app/",
+      "slug": "employee-timesheet-app",
+      "title": "Vanta Workforce | Employee Timesheet App",
+      "type": "cluster_leader",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "employee timesheet app"
+    },
+    {
+      "path": "/workforce/staff-timesheet-app/",
+      "slug": "staff-timesheet-app",
+      "title": "Vanta Workforce | Staff Timesheet App",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "staff timesheet app"
+    },
+    {
+      "path": "/workforce/mobile-timesheet-app/",
+      "slug": "mobile-timesheet-app",
+      "title": "Vanta Workforce | Mobile Timesheet App",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "mobile timesheets"
+    },
+    {
+      "path": "/workforce/digital-timesheet-system/",
+      "slug": "digital-timesheet-system",
+      "title": "Vanta Workforce | Digital Timesheet System",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "digital timesheet system"
+    },
+    {
+      "path": "/workforce/working-hours-tracker/",
+      "slug": "working-hours-tracker",
+      "title": "Vanta Workforce | Working Hours Tracker",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "working hours tracking"
+    },
+    {
+      "path": "/workforce/employee-hours-tracking/",
+      "slug": "employee-hours-tracking",
+      "title": "Vanta Workforce | Employee Hours Tracking",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "employee hours tracking"
+    },
+    {
+      "path": "/workforce/monthly-timesheet-app/",
+      "slug": "monthly-timesheet-app",
+      "title": "Vanta Workforce | Monthly Timesheet App",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "monthly timesheets"
+    },
+    {
+      "path": "/workforce/overnight-shift-timesheets/",
+      "slug": "overnight-shift-timesheets",
+      "title": "Vanta Workforce | Overnight Shift Timesheets",
+      "type": "commercial",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "overnight shift timesheets"
+    },
+    {
+      "path": "/workforce/workplace-presence-app/",
+      "slug": "workplace-presence-app",
+      "title": "Vanta Workforce | Workplace Presence App",
+      "type": "cluster_leader",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "workplace presence"
+    },
+    {
+      "path": "/workforce/employee-presence-tracking/",
+      "slug": "employee-presence-tracking",
+      "title": "Vanta Workforce | Employee Presence Tracking",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "employee presence"
+    },
+    {
+      "path": "/workforce/site-attendance-app/",
+      "slug": "site-attendance-app",
+      "title": "Vanta Workforce | Site Attendance App",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "site attendance"
+    },
+    {
+      "path": "/workforce/multi-site-attendance-system/",
+      "slug": "multi-site-attendance-system",
+      "title": "Vanta Workforce | Multi-Site Attendance System",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "multi-site attendance"
+    },
+    {
+      "path": "/workforce/construction-site-attendance-app/",
+      "slug": "construction-site-attendance-app",
+      "title": "Vanta Workforce | Construction Site Attendance App",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "construction attendance"
+    },
+    {
+      "path": "/workforce/workplace-attendance-register/",
+      "slug": "workplace-attendance-register",
+      "title": "Vanta Workforce | Workplace Attendance Register",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "workplace attendance register"
+    },
+    {
+      "path": "/workforce/staff-on-site-tracker/",
+      "slug": "staff-on-site-tracker",
+      "title": "Vanta Workforce | Staff On-Site Tracker",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "staff on-site status"
+    },
+    {
+      "path": "/workforce/who-is-working-app/",
+      "slug": "who-is-working-app",
+      "title": "Vanta Workforce | Who Is Working App",
+      "type": "commercial",
+      "cluster": "workplace-presence",
+      "cluster_name": "Workplace and site presence",
+      "cluster_leader": "/workforce/workplace-presence-app/",
+      "intent": "who is working"
+    },
+    {
+      "path": "/workforce/field-worker-attendance-app/",
+      "slug": "field-worker-attendance-app",
+      "title": "Vanta Workforce | Field Worker Attendance App",
+      "type": "cluster_leader",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "field worker attendance"
+    },
+    {
+      "path": "/workforce/mobile-workforce-management-app/",
+      "slug": "mobile-workforce-management-app",
+      "title": "Vanta Workforce | Mobile Workforce Management App",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "mobile workforce management"
+    },
+    {
+      "path": "/workforce/remote-worker-check-in-app/",
+      "slug": "remote-worker-check-in-app",
+      "title": "Vanta Workforce | Remote Worker Check-In App",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "remote worker check-in"
+    },
+    {
+      "path": "/workforce/mobile-worker-clock-in-app/",
+      "slug": "mobile-worker-clock-in-app",
+      "title": "Vanta Workforce | Mobile Worker Clock-In App",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "mobile worker clock-in"
+    },
+    {
+      "path": "/workforce/field-team-timesheet-app/",
+      "slug": "field-team-timesheet-app",
+      "title": "Vanta Workforce | Field Team Timesheet App",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "field team timesheets"
+    },
+    {
+      "path": "/workforce/distributed-workforce-attendance/",
+      "slug": "distributed-workforce-attendance",
+      "title": "Vanta Workforce | Distributed Workforce Attendance",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "distributed workforce attendance"
+    },
+    {
+      "path": "/workforce/off-site-worker-attendance/",
+      "slug": "off-site-worker-attendance",
+      "title": "Vanta Workforce | Off-Site Worker Attendance",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "off-site worker attendance"
+    },
+    {
+      "path": "/workforce/field-staff-hours-tracker/",
+      "slug": "field-staff-hours-tracker",
+      "title": "Vanta Workforce | Field Staff Hours Tracker",
+      "type": "commercial",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "field staff hours"
+    },
+    {
+      "path": "/workforce/worker-safety-check-app/",
+      "slug": "worker-safety-check-app",
+      "title": "Vanta Workforce | Worker Safety Check App",
+      "type": "cluster_leader",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "worker safety checks"
+    },
+    {
+      "path": "/workforce/lone-worker-check-in-app/",
+      "slug": "lone-worker-check-in-app",
+      "title": "Vanta Workforce | Lone Worker Check-In App",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "lone worker check-in"
+    },
+    {
+      "path": "/workforce/scheduled-worker-checks/",
+      "slug": "scheduled-worker-checks",
+      "title": "Vanta Workforce | Scheduled Worker Checks",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "scheduled worker checks"
+    },
+    {
+      "path": "/workforce/staff-welfare-check-app/",
+      "slug": "staff-welfare-check-app",
+      "title": "Vanta Workforce | Staff Welfare Check App",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "staff welfare checks"
+    },
+    {
+      "path": "/workforce/workplace-incident-reporting-app/",
+      "slug": "workplace-incident-reporting-app",
+      "title": "Vanta Workforce | Workplace Incident Reporting App",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "workplace incident reporting"
+    },
+    {
+      "path": "/workforce/employee-incident-reporting/",
+      "slug": "employee-incident-reporting",
+      "title": "Vanta Workforce | Employee Incident Reporting",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "employee incident reporting"
+    },
+    {
+      "path": "/workforce/worker-phone-checks/",
+      "slug": "worker-phone-checks",
+      "title": "Vanta Workforce | Worker Phone Checks",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "worker phone checks"
+    },
+    {
+      "path": "/workforce/scheduled-safety-prompts/",
+      "slug": "scheduled-safety-prompts",
+      "title": "Vanta Workforce | Scheduled Safety Prompts",
+      "type": "commercial",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "scheduled safety prompts"
+    },
+    {
+      "path": "/workforce/control-centre-workforce-app/",
+      "slug": "control-centre-workforce-app",
+      "title": "Vanta Workforce | Control Centre Workforce App",
+      "type": "cluster_leader",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "workforce control centre"
+    },
+    {
+      "path": "/workforce/live-workforce-status/",
+      "slug": "live-workforce-status",
+      "title": "Vanta Workforce | Live Workforce Status",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "live workforce status"
+    },
+    {
+      "path": "/workforce/manager-attendance-dashboard/",
+      "slug": "manager-attendance-dashboard",
+      "title": "Vanta Workforce | Manager Attendance Dashboard",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "manager attendance dashboard"
+    },
+    {
+      "path": "/workforce/workforce-oversight-app/",
+      "slug": "workforce-oversight-app",
+      "title": "Vanta Workforce | Workforce Oversight App",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "workforce oversight"
+    },
+    {
+      "path": "/workforce/manager-worker-status-app/",
+      "slug": "manager-worker-status-app",
+      "title": "Vanta Workforce | Manager Worker Status App",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "manager worker status"
+    },
+    {
+      "path": "/workforce/staff-status-dashboard/",
+      "slug": "staff-status-dashboard",
+      "title": "Vanta Workforce | Staff Status Dashboard",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "staff status dashboard"
+    },
+    {
+      "path": "/workforce/workplace-control-centre/",
+      "slug": "workplace-control-centre",
+      "title": "Vanta Workforce | Workplace Control Centre",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "workplace control centre"
+    },
+    {
+      "path": "/workforce/multi-site-workforce-dashboard/",
+      "slug": "multi-site-workforce-dashboard",
+      "title": "Vanta Workforce | Multi-Site Workforce Dashboard",
+      "type": "commercial",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "multi-site workforce dashboard"
+    },
+    {
+      "path": "/workforce/attendance-reporting-app/",
+      "slug": "attendance-reporting-app",
+      "title": "Vanta Workforce | Attendance Reporting App",
+      "type": "cluster_leader",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "attendance reporting"
+    },
+    {
+      "path": "/workforce/timesheet-export-app/",
+      "slug": "timesheet-export-app",
+      "title": "Vanta Workforce | Timesheet Export App",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "timesheet export"
+    },
+    {
+      "path": "/workforce/staff-hours-reporting/",
+      "slug": "staff-hours-reporting",
+      "title": "Vanta Workforce | Staff Hours Reporting",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "staff hours reporting"
+    },
+    {
+      "path": "/workforce/employee-attendance-reports/",
+      "slug": "employee-attendance-reports",
+      "title": "Vanta Workforce | Employee Attendance Reports",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "employee attendance reports"
+    },
+    {
+      "path": "/workforce/monthly-attendance-reports/",
+      "slug": "monthly-attendance-reports",
+      "title": "Vanta Workforce | Monthly Attendance Reports",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "monthly attendance reports"
+    },
+    {
+      "path": "/workforce/workforce-hours-export/",
+      "slug": "workforce-hours-export",
+      "title": "Vanta Workforce | Workforce Hours Export",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "workforce hours export"
+    },
+    {
+      "path": "/workforce/cross-month-timesheet-records/",
+      "slug": "cross-month-timesheet-records",
+      "title": "Vanta Workforce | Cross-Month Timesheet Records",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "cross-month timesheets"
+    },
+    {
+      "path": "/workforce/attendance-history-app/",
+      "slug": "attendance-history-app",
+      "title": "Vanta Workforce | Attendance History App",
+      "type": "commercial",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "attendance history"
+    },
+    {
+      "path": "/workforce/workforce-management-app/",
+      "slug": "workforce-management-app",
+      "title": "Vanta Workforce | Workforce Management App",
+      "type": "cluster_leader",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "workforce management"
+    },
+    {
+      "path": "/workforce/site-management-app/",
+      "slug": "site-management-app",
+      "title": "Vanta Workforce | Site Management App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "site management"
+    },
+    {
+      "path": "/workforce/workplace-management-app/",
+      "slug": "workplace-management-app",
+      "title": "Vanta Workforce | Workplace Management App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "workplace management"
+    },
+    {
+      "path": "/workforce/manager-and-worker-app/",
+      "slug": "manager-and-worker-app",
+      "title": "Vanta Workforce | Manager and Worker App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "manager and worker roles"
+    },
+    {
+      "path": "/workforce/business-attendance-app/",
+      "slug": "business-attendance-app",
+      "title": "Vanta Workforce | Business Attendance App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "business attendance"
+    },
+    {
+      "path": "/workforce/staff-operations-app/",
+      "slug": "staff-operations-app",
+      "title": "Vanta Workforce | Staff Operations App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "staff operations"
+    },
+    {
+      "path": "/workforce/workforce-records-app/",
+      "slug": "workforce-records-app",
+      "title": "Vanta Workforce | Workforce Records App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "workforce records"
+    },
+    {
+      "path": "/workforce/android-ios-workforce-app/",
+      "slug": "android-ios-workforce-app",
+      "title": "Vanta Workforce | Android and iOS Workforce App",
+      "type": "commercial",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "Android and iOS workforce app"
+    },
+    {
+      "path": "/workforce/staff-scheduling-app/",
+      "slug": "staff-scheduling-app",
+      "title": "Vanta Workforce | Staff Scheduling App",
+      "type": "cluster_leader",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "staff scheduling app"
+    },
+    {
+      "path": "/workforce/employee-scheduling-app/",
+      "slug": "employee-scheduling-app",
+      "title": "Vanta Workforce | Employee Scheduling App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "employee scheduling app"
+    },
+    {
+      "path": "/workforce/shift-scheduling-app/",
+      "slug": "shift-scheduling-app",
+      "title": "Vanta Workforce | Shift Scheduling App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "shift scheduling app"
+    },
+    {
+      "path": "/workforce/staff-rota-app/",
+      "slug": "staff-rota-app",
+      "title": "Vanta Workforce | Staff Rota App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "staff rota app"
+    },
+    {
+      "path": "/workforce/employee-rota-app/",
+      "slug": "employee-rota-app",
+      "title": "Vanta Workforce | Employee Rota App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "employee rota app"
+    },
+    {
+      "path": "/workforce/rota-management-app/",
+      "slug": "rota-management-app",
+      "title": "Vanta Workforce | Rota Management App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "rota management app"
+    },
+    {
+      "path": "/workforce/employee-work-schedule-app/",
+      "slug": "employee-work-schedule-app",
+      "title": "Vanta Workforce | Employee Work Schedule App",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "employee work schedule app"
+    },
+    {
+      "path": "/workforce/staff-shift-planner/",
+      "slug": "staff-shift-planner",
+      "title": "Vanta Workforce | Staff Shift Planner",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "staff shift planner"
+    },
+    {
+      "path": "/workforce/multi-site-staff-scheduling/",
+      "slug": "multi-site-staff-scheduling",
+      "title": "Vanta Workforce | Multi-Site Staff Scheduling",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "multi-site staff scheduling"
+    },
+    {
+      "path": "/workforce/workplace-shift-scheduling/",
+      "slug": "workplace-shift-scheduling",
+      "title": "Vanta Workforce | Workplace Shift Scheduling",
+      "type": "commercial",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "workplace shift scheduling"
+    },
+    {
+      "path": "/workforce/guides/how-staff-attendance-apps-work/",
+      "slug": "guides/how-staff-attendance-apps-work",
+      "title": "Vanta Workforce Guide | How Staff Attendance Apps Work",
+      "type": "guide",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "how staff attendance apps work"
+    },
+    {
+      "path": "/workforce/guides/choosing-a-staff-attendance-system/",
+      "slug": "guides/choosing-a-staff-attendance-system",
+      "title": "Vanta Workforce Guide | Choosing a Staff Attendance System",
+      "type": "guide",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "choosing a staff attendance system"
+    },
+    {
+      "path": "/workforce/guides/attendance-app-vs-paper-register/",
+      "slug": "guides/attendance-app-vs-paper-register",
+      "title": "Vanta Workforce Guide | Attendance App vs Paper Register",
+      "type": "guide",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "attendance app vs paper register"
+    },
+    {
+      "path": "/workforce/guides/how-to-introduce-digital-attendance/",
+      "slug": "guides/how-to-introduce-digital-attendance",
+      "title": "Vanta Workforce Guide | How to Introduce Digital Attendance",
+      "type": "guide",
+      "cluster": "attendance",
+      "cluster_name": "Staff attendance",
+      "cluster_leader": "/workforce/staff-attendance-app/",
+      "intent": "how to introduce digital attendance"
+    },
+    {
+      "path": "/workforce/guides/how-mobile-clock-in-works/",
+      "slug": "guides/how-mobile-clock-in-works",
+      "title": "Vanta Workforce Guide | How Mobile Clock-In Works",
+      "type": "guide",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "how mobile clock-in works"
+    },
+    {
+      "path": "/workforce/guides/how-to-improve-clock-in-accuracy/",
+      "slug": "guides/how-to-improve-clock-in-accuracy",
+      "title": "Vanta Workforce Guide | How to Improve Clock-In Accuracy",
+      "type": "guide",
+      "cluster": "clocking",
+      "cluster_name": "Clocking in and out",
+      "cluster_leader": "/workforce/employee-clock-in-app/",
+      "intent": "how to improve clock-in accuracy"
+    },
+    {
+      "path": "/workforce/guides/how-gps-clock-in-works/",
+      "slug": "guides/how-gps-clock-in-works",
+      "title": "Vanta Workforce Guide | How GPS Clock-In Works",
+      "type": "guide",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "how gps clock-in works"
+    },
+    {
+      "path": "/workforce/guides/employee-location-privacy/",
+      "slug": "guides/employee-location-privacy",
+      "title": "Vanta Workforce Guide | Employee Location Privacy",
+      "type": "guide",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "employee location privacy"
+    },
+    {
+      "path": "/workforce/guides/what-to-do-when-clock-in-location-fails/",
+      "slug": "guides/what-to-do-when-clock-in-location-fails",
+      "title": "Vanta Workforce Guide | What to Do When Clock-In Location Fails",
+      "type": "guide",
+      "cluster": "gps-attendance",
+      "cluster_name": "GPS and location-aware attendance",
+      "cluster_leader": "/workforce/gps-clock-in-app/",
+      "intent": "what to do when clock-in location fails"
+    },
+    {
+      "path": "/workforce/guides/how-to-improve-timesheet-accuracy/",
+      "slug": "guides/how-to-improve-timesheet-accuracy",
+      "title": "Vanta Workforce Guide | How to Improve Timesheet Accuracy",
+      "type": "guide",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "how to improve timesheet accuracy"
+    },
+    {
+      "path": "/workforce/guides/how-to-track-working-hours/",
+      "slug": "guides/how-to-track-working-hours",
+      "title": "Vanta Workforce Guide | How to Track Working Hours",
+      "type": "guide",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "how to track working hours"
+    },
+    {
+      "path": "/workforce/guides/how-overnight-shifts-affect-timesheets/",
+      "slug": "guides/how-overnight-shifts-affect-timesheets",
+      "title": "Vanta Workforce Guide | How Overnight Shifts Affect Timesheets",
+      "type": "guide",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "how overnight shifts affect timesheets"
+    },
+    {
+      "path": "/workforce/guides/how-monthly-attendance-periods-work/",
+      "slug": "guides/how-monthly-attendance-periods-work",
+      "title": "Vanta Workforce Guide | How Monthly Attendance Periods Work",
+      "type": "guide",
+      "cluster": "timesheets",
+      "cluster_name": "Timesheets and working hours",
+      "cluster_leader": "/workforce/employee-timesheet-app/",
+      "intent": "how monthly attendance periods work"
+    },
+    {
+      "path": "/workforce/guides/how-to-manage-mobile-workers/",
+      "slug": "guides/how-to-manage-mobile-workers",
+      "title": "Vanta Workforce Guide | How to Manage Mobile Workers",
+      "type": "guide",
+      "cluster": "mobile-workforces",
+      "cluster_name": "Mobile and field workforces",
+      "cluster_leader": "/workforce/field-worker-attendance-app/",
+      "intent": "how to manage mobile workers"
+    },
+    {
+      "path": "/workforce/guides/how-worker-safety-checks-work/",
+      "slug": "guides/how-worker-safety-checks-work",
+      "title": "Vanta Workforce Guide | How Worker Safety Checks Work",
+      "type": "guide",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "how worker safety checks work"
+    },
+    {
+      "path": "/workforce/guides/how-scheduled-worker-prompts-work/",
+      "slug": "guides/how-scheduled-worker-prompts-work",
+      "title": "Vanta Workforce Guide | How Scheduled Worker Prompts Work",
+      "type": "guide",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "how scheduled worker prompts work"
+    },
+    {
+      "path": "/workforce/guides/how-to-report-a-workplace-incident/",
+      "slug": "guides/how-to-report-a-workplace-incident",
+      "title": "Vanta Workforce Guide | How to Report a Workplace Incident",
+      "type": "guide",
+      "cluster": "worker-safety",
+      "cluster_name": "Worker safety and scheduled checks",
+      "cluster_leader": "/workforce/worker-safety-check-app/",
+      "intent": "how to report a workplace incident"
+    },
+    {
+      "path": "/workforce/guides/how-managers-monitor-workforce-status/",
+      "slug": "guides/how-managers-monitor-workforce-status",
+      "title": "Vanta Workforce Guide | How Managers Monitor Workforce Status",
+      "type": "guide",
+      "cluster": "control-centre",
+      "cluster_name": "Manager and Control Centre oversight",
+      "cluster_leader": "/workforce/control-centre-workforce-app/",
+      "intent": "how managers monitor workforce status"
+    },
+    {
+      "path": "/workforce/guides/how-to-export-timesheet-records/",
+      "slug": "guides/how-to-export-timesheet-records",
+      "title": "Vanta Workforce Guide | How to Export Timesheet Records",
+      "type": "guide",
+      "cluster": "reporting",
+      "cluster_name": "Attendance reporting and exports",
+      "cluster_leader": "/workforce/attendance-reporting-app/",
+      "intent": "how to export timesheet records"
+    },
+    {
+      "path": "/workforce/guides/troubleshooting-mobile-attendance/",
+      "slug": "guides/troubleshooting-mobile-attendance",
+      "title": "Vanta Workforce Guide | Troubleshooting Mobile Attendance",
+      "type": "guide",
+      "cluster": "operations",
+      "cluster_name": "Workplace operations",
+      "cluster_leader": "/workforce/workforce-management-app/",
+      "intent": "troubleshooting mobile attendance"
+    },
+    {
+      "path": "/workforce/guides/how-to-create-a-staff-rota/",
+      "slug": "guides/how-to-create-a-staff-rota",
+      "title": "Vanta Workforce Guide | How to Create a Staff Rota",
+      "type": "guide",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "how to create a staff rota"
+    },
+    {
+      "path": "/workforce/guides/how-employee-shift-scheduling-works/",
+      "slug": "guides/how-employee-shift-scheduling-works",
+      "title": "Vanta Workforce Guide | How Employee Shift Scheduling Works",
+      "type": "guide",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "how employee shift scheduling works"
+    },
+    {
+      "path": "/workforce/guides/staff-scheduling-vs-spreadsheets/",
+      "slug": "guides/staff-scheduling-vs-spreadsheets",
+      "title": "Vanta Workforce Guide | Staff Scheduling vs Spreadsheets",
+      "type": "guide",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "staff scheduling vs spreadsheets"
+    },
+    {
+      "path": "/workforce/guides/how-to-schedule-staff-across-multiple-workplaces/",
+      "slug": "guides/how-to-schedule-staff-across-multiple-workplaces",
+      "title": "Vanta Workforce Guide | How to Schedule Staff Across Multiple Workplaces",
+      "type": "guide",
+      "cluster": "scheduling",
+      "cluster_name": "Staff scheduling and rotas",
+      "cluster_leader": "/workforce/staff-scheduling-app/",
+      "intent": "how to schedule staff across multiple workplaces"
+    }
+  ]
+}

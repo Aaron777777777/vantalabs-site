@@ -1370,3 +1370,167 @@ body:not(.parent-quest-detail) .iconbox img {
     padding:56px 0 68px!important;
   }
 }
+
+/* Compact SEO detail hero 20260819 */
+.workforce-detail.seo-compact-hero .hero{
+  min-height:auto!important;
+  width:min(var(--max),calc(100% - 44px))!important;
+  grid-template-columns:minmax(0,1fr) 220px!important;
+  gap:72px!important;
+  align-items:center!important;
+  padding:86px 0 88px!important;
+}
+
+.workforce-detail.seo-compact-hero .hero > div:first-child{
+  max-width:780px!important;
+}
+
+.workforce-detail.seo-compact-hero .hero h1{
+  max-width:760px!important;
+  margin-top:14px!important;
+  font-size:clamp(54px,5.6vw,78px)!important;
+  line-height:.98!important;
+  letter-spacing:-.055em!important;
+}
+
+.workforce-detail.seo-compact-hero .hero .lead{
+  max-width:680px!important;
+  margin-top:24px!important;
+  font-size:18px!important;
+  line-height:1.72!important;
+}
+
+.workforce-detail.seo-compact-hero .iconbox{
+  justify-self:end!important;
+  width:190px!important;
+  height:190px!important;
+  min-height:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+.workforce-detail.seo-compact-hero .iconbox img{
+  width:176px!important;
+  height:176px!important;
+  max-width:176px!important;
+  border-radius:36px!important;
+  box-shadow:0 22px 48px rgba(0,0,0,.38)!important;
+}
+
+@media(max-width:760px){
+  .workforce-detail.seo-compact-hero .hero{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+    padding:58px 0 64px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .iconbox{
+    order:-1!important;
+    justify-self:start!important;
+    width:108px!important;
+    height:108px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .iconbox img{
+    width:108px!important;
+    height:108px!important;
+    border-radius:24px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .hero h1{
+    font-size:clamp(44px,12vw,62px)!important;
+  }
+}
+
+/* FINAL compact SEO hero */
+.workforce-detail.seo-compact-hero .hero{
+  min-height:auto!important;
+  grid-template-columns:minmax(0,1fr) 190px!important;
+  gap:72px!important;
+  padding:76px 0 80px!important;
+  align-items:center!important;
+}
+
+.workforce-detail.seo-compact-hero .hero h1{
+  max-width:720px!important;
+  font-size:clamp(50px,5vw,72px)!important;
+  line-height:.98!important;
+  letter-spacing:-.055em!important;
+}
+
+.workforce-detail.seo-compact-hero .hero .lead{
+  max-width:660px!important;
+  font-size:18px!important;
+  line-height:1.7!important;
+}
+
+.workforce-detail.seo-compact-hero .iconbox{
+  width:180px!important;
+  height:180px!important;
+  min-height:0!important;
+  justify-self:end!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+
+.workforce-detail.seo-compact-hero .iconbox img{
+  position:static!important;
+  display:block!important;
+  width:160px!important;
+  height:160px!important;
+  min-width:160px!important;
+  max-width:160px!important;
+  min-height:160px!important;
+  max-height:160px!important;
+  margin:0!important;
+  padding:0!important;
+  inset:auto!important;
+  transform:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  clip-path:none!important;
+  mask:none!important;
+  opacity:1!important;
+  border-radius:34px!important;
+  box-shadow:0 20px 44px rgba(0,0,0,.38)!important;
+}
+
+@media(max-width:760px){
+  .workforce-detail.seo-compact-hero .hero{
+    grid-template-columns:1fr!important;
+    gap:28px!important;
+    padding:54px 0 62px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .iconbox{
+    order:-1!important;
+    justify-self:start!important;
+    width:104px!important;
+    height:104px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .iconbox img{
+    width:104px!important;
+    height:104px!important;
+    min-width:104px!important;
+    max-width:104px!important;
+    min-height:104px!important;
+    max-height:104px!important;
+    border-radius:22px!important;
+  }
+
+  .workforce-detail.seo-compact-hero .hero h1{
+    font-size:clamp(43px,12vw,60px)!important;
+  }
+}

@@ -164,3 +164,45 @@ for slug,(h2,desc) in SHIFT.items():
     rebuild(R/f"vanta-shift/{slug}/index.html",template,"workforce-lower-grid",h2,desc)
 
 print("Polished:",len(GUARDIAN),"Guardian,",len(WORKFORCE),"Workforce,",len(SHIFT),"Vanta Shift pages")
+
+
+# Metadata safety pass
+def ensure_page_metadata(path, base_url):
+    import html as _html, re as _re
+    from bs4 import BeautifulSoup as _BS
+    t=path.read_text()
+    s=_BS(t,"html.parser")
+    title=s.title.get_text(" ",strip=True) if s.title else ""
+    lead=s.select_one(".hero .lead")
+    desc=lead.get_text(" ",strip=True) if lead else ""
+    canonical=base_url
+
+    t=_re.sub(r'<meta[^>]*name=["\']description["\'][^>]*>',"",t,flags=_re.I|_re.S)
+    t=_re.sub(r'<link[^>]*rel=["\']canonical["\'][^>]*>',"",t,flags=_re.I|_re.S)
+    for prop in ("og:title","og:description","og:url"):
+        t=_re.sub(
+            rf'<meta[^>]*property=["\']{_re.escape(prop)}["\'][^>]*>',
+            "",t,flags=_re.I|_re.S
+        )
+
+    tags=(
+        '\n<meta name="description" content="'+_html.escape(desc,quote=True)+'">'
+        '\n<link rel="canonical" href="'+canonical+'">'
+        '\n<meta property="og:title" content="'+_html.escape(title,quote=True)+'">'
+        '\n<meta property="og:description" content="'+_html.escape(desc,quote=True)+'">'
+        '\n<meta property="og:url" content="'+canonical+'">\n'
+    )
+    t=t.replace("</title>","</title>"+tags,1)
+    path.write_text(t)
+
+for _slug in WORKFORCE:
+    ensure_page_metadata(
+        R/"workforce"/_slug/"index.html",
+        "https://vantalabs.co.uk/workforce/"+_slug+"/"
+    )
+
+for _slug in SHIFT:
+    ensure_page_metadata(
+        R/"vanta-shift"/_slug/"index.html",
+        "https://vantalabs.co.uk/vanta-shift/"+_slug+"/"
+    )

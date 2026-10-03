@@ -1265,3 +1265,26 @@ body:not(.parent-quest-detail) .iconbox img {
     border-radius: 24px !important;
   }
 }
+
+/* Parent Quest detail pages — let app icon fill its frame */
+.parent-quest-detail .iconbox {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.parent-quest-detail .iconbox img {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 27px !important;
+}
+
+@media (max-width: 900px) {
+  .parent-quest-detail .iconbox img {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    border-radius: 22px !important;
+  }
+}
